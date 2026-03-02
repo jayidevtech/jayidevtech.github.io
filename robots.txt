@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jayidevtech.com/sitemap.xml
+
+# Disallow admin and private areas (if any in the future)
+# Disallow: /admin/
+# Disallow: /private/
