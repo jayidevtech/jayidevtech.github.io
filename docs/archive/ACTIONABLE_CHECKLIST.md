@@ -97,9 +97,8 @@ python3 -m http.server 8000
 
 ### 1.6 PROJECT CLEANUP [30 minutes]
 - [ ] Create `docs/` folder
-- [ ] Move legacy docs to docs/:
-  - `CDN-README.md` → `docs/CDN-LEGACY.md`
-  - `STATIC-vs-BUILD.md` → `docs/DECISION-HISTORY.md`
+- [ ] Remove legacy CDN artifacts and references
+- [ ] Confirm docs use build-only workflow (`src/` → `public/`)
 
 - [ ] Update `.gitignore`:
   ```

@@ -1,18 +1,18 @@
 # JAYIDEVTECH - Professional Landing Page
 
-![JAYIDEVTECH Landing Page](./images/logo_jayidevtech.svg)
+![JAYIDEVTECH Landing Page](./static/images/logo_jayidevtech.svg)
 
-A professional landing page for JAYIDEVTECH showcasing our software development services. Built with modern web technologies using **Tailwind CSS** (via build process) and **Flowbite** component library for a responsive, fast, and beautiful user experience.
+A professional landing page for JAYIDEVTECH showcasing our software development services. Built with **Vue 3 + Vite**, **Tailwind CSS**, and **Flowbite** for a responsive, fast, and maintainable experience.
 
-## ✨ Build-Based Setup
+## ✨ Vue Build Setup
 
-This version uses a modern build pipeline with Tailwind CSS CLI for optimized CSS output. Requires Node.js and npm, but provides better performance and maintainability.
+This version uses a Vue 3 + Vite build pipeline with Tailwind CSS. Source code is developed in `src/` and production output is generated into `dist/`.
 
 ## 🚀 Features
 
 - **Responsive Design** - Works perfectly on all devices
 - **Modern UI/UX** - Clean and professional interface
-- **Fast Performance** - Optimized CSS via Tailwind build process
+- **Fast Performance** - Optimized production build via Vite
 - **SEO Friendly** - Proper meta tags and semantic HTML
 - **Dark Mode Support** - Full dark mode implementation
 - **Smooth Animations** - Engaging user interactions
@@ -20,19 +20,32 @@ This version uses a modern build pipeline with Tailwind CSS CLI for optimized CS
 - **Flowbite Components** - Pre-built interactive components
 - **Developer Friendly** - Easy to customize and extend
 
+## 📈 Current Status
+
+- **Workflow:** Build-only (`src/` → `dist/`)
+- **Phase 1:** ✅ Complete (stabilization and build pipeline)
+- **Phase 2:** 🟨 Mostly complete (interactive fixes, SEO, analytics done)
+- **Remaining in Phase 2:** Final image compression/performance pass
+- **Next focus:** Phase 3 cross-browser and quality testing
+
+Detailed progress is tracked in **[docs/PHASE_2_STATUS.md](./docs/PHASE_2_STATUS.md)**.
+
 ## 🛠️ Built With
 
 - [Tailwind CSS v4.2.1](https://tailwindcss.com/) - Utility-first CSS framework
 - [Flowbite v4.0.1](https://flowbite.com/) - Component library built on Tailwind
+- [Vite](https://vite.dev/) - Frontend build tool
+- [Vue 3](https://vuejs.org/) - Progressive JavaScript framework
+- [TypeScript](https://www.typescriptlang.org/) - Static typing for Vue components
+- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) - Linting and formatting
 - [PostCSS](https://postcss.org/) - CSS processing
-- HTML5 & JavaScript
 - Node.js & npm (build tools)
 
 ## 🎯 Quick Start
 
 ### Prerequisites
-- Node.js (v14+)
-- npm (v6+)
+- Node.js (v18+)
+- npm (v9+)
 
 ### Installation
 
@@ -43,36 +56,52 @@ cd jayidevtech-landing-page
 # Install dependencies
 npm install
 
-# Build CSS (first time)
+# Build production bundle
 npm run build
 
-# For development (watch mode)
+# Start development server
 npm run dev
+
+# Type check + lint
+npm run check
 ```
 
 ### Local Testing
 
 ```bash
-# Serve the public folder
-cd public
-python3 -m http.server 8000
-
-# Open browser: http://localhost:8000
+# Run local production preview
+npm run preview
 ```
 
 ### Build Process
 
-The project uses Tailwind CSS CLI to compile styles:
+The project uses Vite to bundle Vue app + Tailwind styles:
 
 ```bash
 # Build once
 npm run build
 
-# Watch for changes (development)
+# Start local development
 npm run dev
 ```
 
-This generates `public/style.css` from `src/css/style.css`
+This generates optimized assets in `dist/`.
+
+### Quality Commands
+
+```bash
+# TypeScript check only
+npm run type-check
+
+# Lint
+npm run lint
+
+# Auto-fix lint issues
+npm run lint:fix
+
+# Format all files
+npm run format
+```
 
 ### Deploy to Production
 
@@ -82,13 +111,12 @@ This generates `public/style.css` from `src/css/style.css`
 npm run build
 ```
 
-This creates the `public/` folder with:
-- `public/index.html` - Compiled HTML
-- `public/style.css` - Compiled CSS (optimized)
-- `public/js/` - JavaScript files
-- `public/images/` - Image assets
+This creates the `dist/` folder with:
+- `dist/index.html` - Production entry
+- `dist/assets/` - Bundled JS/CSS and hashed assets
+- `dist/images/` - Static image assets
 
-**Upload the `public/` folder contents to your hosting:**
+**Upload the `dist/` folder contents to your hosting:**
 
 #### Deployment Options:
 
@@ -101,7 +129,7 @@ vercel deploy
 **2. Netlify**
 ```bash
 npm install -g netlify-cli
-netlify deploy --prod --dir=public
+netlify deploy --prod --dir=dist
 ```
 
 **3. GitHub Pages**
@@ -114,7 +142,7 @@ git push
 
 **4. Traditional Hosting (cPanel/FTP)**
 - Build locally: `npm run build`
-- Upload `public/` folder contents via FTP/File Manager
+- Upload `dist/` folder contents via FTP/File Manager
 - Ensure `index.html` is in root directory
 
 ## 📁 Project Structure
@@ -122,42 +150,46 @@ git push
 ```
 jayidevtech-landing-page/
 ├── src/
-│   ├── index.html              # Source HTML file
+│   ├── App.vue                 # Main Vue app component
+│   ├── main.ts                 # Vue app entry point
 │   ├── css/
 │   │   └── style.css           # Tailwind directives
-│   └── js/
-│       └── flowbite.min.js     # Flowbite component library
-├── public/                     # Build output folder
-│   ├── index.html              # Compiled HTML
-│   ├── style.css               # Compiled CSS (generated by npm run build)
-│   ├── js/               
-│   │   └── flowbite.min.js
-│   ├── images/                 # Image assets
-│   │   ├── hero.png
-│   │   ├── feature-1.png
-│   │   ├── feature-2.png
-│   │   └── logo_jayidevtech.svg
-├── images/                     # Source images
+│   └── components/
+│       └── LandingContent.vue  # Landing page markup component
+├── index.html                  # Vite HTML entry
+├── dist/                       # Production build output (generated)
+├── static/                     # Static assets copied as-is by Vite
+│   ├── images/                 # Public images (including icons)
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── site.webmanifest
+│   └── browserconfig.xml
 ├── package.json                # npm configuration
+├── tsconfig.json               # TypeScript configuration
+├── .eslintrc.cjs               # ESLint configuration
+├── .prettierrc.json            # Prettier configuration
 ├── tailwind.config.js          # Tailwind configuration
 ├── postcss.config.js           # PostCSS configuration
-├── robots.txt                  # SEO robots file
-├── sitemap.xml                 # SEO sitemap
-├── README.md                   # This file
-├── DEPLOYMENT.md               # Deployment guide
-├── CHECKLIST.md                # Pre-launch checklist
-├── PROJECT_ANALYSIS.md         # Technical analysis
-├── ACTIONABLE_CHECKLIST.md     # Step-by-step development plan
-└── docs/
-    ├── CDN-LEGACY.md           # Historical CDN approach
-    └── DECISION-HISTORY.md     # Decision documentation
+├── README.md                   # Main documentation
+└── docs/                       # Project documentation
+    ├── DEPLOYMENT.md           # Deployment instructions
+    ├── CHECKLIST.md            # Pre-launch checklist
+    ├── FORMSPREE_SETUP.md      # Contact form integration guide
+    ├── ANALYTICS_SETUP.md      # Google Analytics setup guide
+    ├── PHASE_2_STATUS.md       # Phase 2 overall status
+  ├── archive/                # Historical docs
+  │   ├── ACTIONABLE_CHECKLIST.md
+  │   ├── PROJECT_ANALYSIS.md
+  │   ├── PHASE_2_1_COMPLETE.md
+  │   └── DEVELOPMENT_PLAN_ID.md
+    └── README.md               # Documentation index
 ```
 
 ## 🎨 Customization
 
 ### Editing Content
 
-Edit `src/index.html` with your favorite text editor:
+Edit `src/components/LandingContent.vue`:
 
 1. **Hero Section** - Update tagline and description
 2. **Services** - Modify service offerings
@@ -177,11 +209,11 @@ Tailwind CSS utility classes are used throughout. To customize:
 1. **Edit `tailwind.config.js`** for global configuration
 2. **Add custom CSS** to `src/css/style.css`
 3. **Use Tailwind directives** like `@apply` for custom classes
-4. **Rebuild** with `npm run build`
+4. **Run check/build** with `npm run check`
 
 ### Adding New Sections
 
-Simply add new HTML to `src/index.html`. Tailwind utility classes work immediately after rebuilding.
+Add new section markup in `src/components/LandingContent.vue`.
 
 Example:
 ```html
@@ -193,17 +225,24 @@ Example:
 </section>
 ```
 
-Then rebuild:
+Then validate/build:
 ```bash
-npm run build
+npm run check
 ```
 
 ## 📚 Documentation
 
-- **[ACTIONABLE_CHECKLIST.md](./ACTIONABLE_CHECKLIST.md)** - Step-by-step development and deployment guide
-- **[PROJECT_ANALYSIS.md](./PROJECT_ANALYSIS.md)** - Complete technical analysis and development plan
-- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Detailed deployment instructions
-- **[CHECKLIST.md](./CHECKLIST.md)** - Pre-launch verification checklist
+Comprehensive documentation is available in the `docs/` folder:
+
+- **[docs/FORMSPREE_SETUP.md](./docs/FORMSPREE_SETUP.md)** - Contact form integration guide with Formspree
+- **[docs/ANALYTICS_SETUP.md](./docs/ANALYTICS_SETUP.md)** - Google Analytics (GA4) integration and event tracking guide
+- **[docs/PHASE_2_STATUS.md](./docs/PHASE_2_STATUS.md)** - Current project phase status and progress
+- **[docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md)** - Detailed deployment instructions for various hosting platforms
+- **[docs/CHECKLIST.md](./docs/CHECKLIST.md)** - Pre-launch verification checklist
+- **[docs/archive/ACTIONABLE_CHECKLIST.md](./docs/archive/ACTIONABLE_CHECKLIST.md)** - Historical development checklist
+- **[docs/archive/PROJECT_ANALYSIS.md](./docs/archive/PROJECT_ANALYSIS.md)** - Historical technical analysis
+- **[docs/archive/PHASE_2_1_COMPLETE.md](./docs/archive/PHASE_2_1_COMPLETE.md)** - Historical Phase 2.1 completion summary
+- **[docs/archive/DEVELOPMENT_PLAN_ID.md](./docs/archive/DEVELOPMENT_PLAN_ID.md)** - Historical Indonesian development plan
 
 ## ❓ FAQ
 
@@ -211,23 +250,21 @@ npm run build
 **Yes**, for development. Download from [nodejs.org](https://nodejs.org/). Not needed on production server.
 
 ### How do I make changes?
-1. Edit files in `src/` folder
-2. Run `npm run build`
-3. Deploy `public/` folder to hosting
+1. Edit files in `src/` (utama: `src/components/LandingContent.vue`)
+2. Run `npm run check` untuk type-check + lint + build
+3. Deploy folder `dist/`
 
-### What's the difference between src/ and public/?
-- **src/** - Source files (HTML template, CSS directives)
-- **public/** - Compiled output (ready to deploy)
+### What's the difference between src/ and dist/?
+- **src/** - Source code Vue + TypeScript
+- **dist/** - Output build production (ready to deploy)
 
 ### Can I use this without building?
-See [docs/CDN-LEGACY.md](./docs/CDN-LEGACY.md) for CDN-based approach alternatives.
+No. This project is **build-only** and uses workflow `src/` → `dist/`.
 
 ### How do I preview changes locally?
 ```bash
-npm run dev   # Watch for changes
-cd public
-python3 -m http.server 8000
-# Open http://localhost:8000
+npm run dev      # dev server
+npm run preview  # preview hasil build
 ```
 
 ### Is the CSS optimized?
@@ -236,6 +273,9 @@ Yes! Tailwind CSS build process removes unused styles and optimizes output.
 ### Can I add custom CSS?
 Yes, add it to `src/css/style.css` and rebuild with `npm run build`
 
+### How do I activate the contact form?
+See [docs/FORMSPREE_SETUP.md](./docs/FORMSPREE_SETUP.md) for complete integration instructions with Formspree (5 minutes setup).
+
 ## 🆘 Troubleshooting
 
 ### Build fails with "npm: command not found"
@@ -243,28 +283,27 @@ Install Node.js from [nodejs.org](https://nodejs.org/)
 
 ### Styling not applied
 ```bash
-# Rebuild CSS
+# Rebuild
 npm run build
 
-# Verify public/style.css was created
-ls -la public/style.css
+# Verify dist exists
+ls -la dist
 ```
 
 ### Changes not reflecting
-1. Edit `src/index.html` (not `public/index.html`)
-2. Run `npm run build`
-3. Check `public/style.css` was updated
-4. Refresh browser (hard refresh: Cmd+Shift+R or Ctrl+Shift+R)
+1. Edit file sumber (`src/components/LandingContent.vue` / `src/css/style.css`)
+2. Run `npm run check`
+3. Refresh browser (hard refresh: Cmd+Shift+R)
 
 ### Images not showing
-- Ensure images are in `public/images/` folder
-- Check image paths in HTML use `./images/filename.ext`
+- Ensure images are in `static/images/` folder
+- Check image paths use `/images/filename.ext`
 - Verify `npm run build` completed successfully
 
 ### Local server not starting
 ```bash
-# Try different port if 8000 is in use
-python3 -m http.server 8001
+# Vite preview with custom port
+npm run preview -- --port 8001
 ```
 
 ### Port 8000 already in use

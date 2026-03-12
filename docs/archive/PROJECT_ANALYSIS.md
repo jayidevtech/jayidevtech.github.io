@@ -25,9 +25,8 @@ jayidevtech-landing-page/
 │   ├── tailwind.config.js
 │   └── postcss.config.js
 └── Documentation:
-    ├── README.md (incorrectly describes CDN)
-    ├── STATIC-vs-BUILD.md
-    ├── CDN-README.md (misleading)
+   ├── README.md (build-only)
+   ├── ANALYTICS_SETUP.md
     ├── DEPLOYMENT.md
     └── CHECKLIST.md
 ```
@@ -61,7 +60,7 @@ jayidevtech-landing-page/
 
 **⚠️ Medium Issues:**
 1. package.json fields incomplete (author, description)
-2. Orphaned documentation (CDN-README.md, STATIC-vs-BUILD.md)
+2. Documentation consistency across old planning files
 3. Contact form HTML-only (no backend handling)
 4. No analytics setup
 5. No form submission handler
@@ -171,8 +170,8 @@ Tools to test:
 #### 1.5 Project Cleanup [PRIORITY: 🟡 MEDIUM]
 ```
 - [ ] Create /docs folder
-- [ ] Move CDN-README.md to docs/CDN-LEGACY.md
-- [ ] Move STATIC-vs-BUILD.md to docs/DECISION.md
+- [ ] Remove legacy CDN docs from active documentation
+- [ ] Ensure documentation states build-only workflow
 - [ ] Update .gitignore
 - [ ] Add build artifacts to gitignore
 - [ ] Review git history

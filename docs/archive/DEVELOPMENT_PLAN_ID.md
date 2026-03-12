@@ -412,9 +412,9 @@ Detailed information available in:
    - Step-by-step guides
    - Hosting options
 
-5. **STATIC-vs-BUILD.md** - Legacy comparison guide
-   - CDN vs Build discussion
-   - Historical context
+5. **ANALYTICS_SETUP.md** - Panduan setup analytics
+    - Integrasi GA4
+    - Event tracking CTA dan form
 
 ---
 

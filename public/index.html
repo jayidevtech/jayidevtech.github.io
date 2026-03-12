@@ -16,7 +16,7 @@ npm run dev (watch mode)
 See README.md for detailed instructions.
 ====================================================================
 -->
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <link rel="canonical" href="https://jayidevtech.com/" />
     <meta charset="UTF-8">
@@ -27,7 +27,9 @@ See README.md for detailed instructions.
     <!-- Meta SEO -->
     <meta name="title" content="JAYIDEVTECH - Building Digital Products & Brands">
     <meta name="description" content="Professional software development services. We build scalable web applications, mobile apps, and digital solutions for businesses.">
+    <meta name="keywords" content="software development, web development, mobile app development, digital solutions, jasa pembuatan website, jasa aplikasi">
     <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Indonesian">
     <meta name="author" content="JAYIDEVTECH">
@@ -37,20 +39,104 @@ See README.md for detailed instructions.
     <meta property="og:site_name" content="JAYIDEVTECH">
     <meta property="og:url" content="https://jayidevtech.com/" />
     <meta property="og:description" content="Professional software development services. We build scalable web applications, mobile apps, and digital solutions for businesses.">
+    <meta property="og:locale" content="id_ID">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://jayidevtech.com/images/og-image.png">
+    <meta property="og:image:alt" content="JAYIDEVTECH - Building Digital Products & Brands">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@jayidevtech" />
     <meta name="twitter:creator" content="@jayidevtech" />
+    <meta name="twitter:title" content="JAYIDEVTECH - Building Digital Products & Brands" />
+    <meta name="twitter:description" content="Professional software development services. We build scalable web applications, mobile apps, and digital solutions for businesses." />
+    <meta name="twitter:image" content="https://jayidevtech.com/images/og-image.png" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/images/icons/favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="./style.css">
+
+    <script>
+        window.JDT_ANALYTICS_CONFIG = {
+            measurementId: 'G-XXXXXXXXXX'
+        };
+
+        (function initializeAnalytics() {
+            var measurementId = window.JDT_ANALYTICS_CONFIG.measurementId;
+            var hasValidMeasurementId = /^G-[A-Z0-9]+$/i.test(measurementId) && measurementId !== 'G-XXXXXXXXXX';
+
+            if (!hasValidMeasurementId) {
+                return;
+            }
+
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function gtag() {
+                window.dataLayer.push(arguments);
+            };
+
+            window.gtag('js', new Date());
+            window.gtag('config', measurementId, {
+                anonymize_ip: true,
+                send_page_view: true
+            });
+
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+            document.head.appendChild(script);
+        })();
+    </script>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "name": "JAYIDEVTECH",
+                    "url": "https://jayidevtech.com/",
+                    "logo": "https://jayidevtech.com/images/logo_jayidevtech.png",
+                    "description": "Professional software development services for web, mobile, and digital products.",
+                    "sameAs": [
+                        "https://x.com/jayidevtech"
+                    ]
+                },
+                {
+                    "@type": "WebSite",
+                    "name": "JAYIDEVTECH",
+                    "url": "https://jayidevtech.com/",
+                    "inLanguage": "id"
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://jayidevtech.com/#home"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://jayidevtech.com/#services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Contact",
+                            "item": "https://jayidevtech.com/#contact"
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
     
 </head>
 <body>
@@ -58,10 +144,10 @@ See README.md for detailed instructions.
         <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/" class="flex items-center">
-                    <img src="./images/logo_jayidevtech.svg" class="h-6 mr-3 sm:h-9" alt="JAYIDEVTECH Logo" />
+                    <img src="./images/logo_jayidevtech.svg" class="h-6 mr-3 sm:h-9" alt="JAYIDEVTECH Logo" width="107" height="24" decoding="async" />
                 </a>
                 <div class="flex items-center lg:order-2">
-                    <a href="#contact" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Get Started</a>
+                    <a href="#contact" data-track="nav_get_started" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Get Started</a>
                     <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -94,6 +180,16 @@ See README.md for detailed instructions.
         </nav>
     </header>
 
+    <nav aria-label="Breadcrumb" class="bg-white pt-20 dark:bg-gray-900">
+        <ol class="max-w-screen-xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+            <li><a href="#home" class="hover:text-blue-700 dark:hover:text-blue-400">Home</a></li>
+            <li>/</li>
+            <li><a href="#services" class="hover:text-blue-700 dark:hover:text-blue-400">Services</a></li>
+            <li>/</li>
+            <li aria-current="page" class="text-gray-700 dark:text-gray-200">Contact</li>
+        </ol>
+    </nav>
+
     <!-- Start block -->
     <section id="home" class="bg-white dark:bg-gray-900">
         <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
@@ -101,17 +197,17 @@ See README.md for detailed instructions.
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Building digital <br>products & brands.</h1>
                 <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">We specialize in developing innovative web applications, mobile solutions, and digital products that help businesses grow. From concept to deployment, we deliver excellence.</p>
                 <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white bg-blue-600 border border-blue-600 rounded-lg sm:w-auto hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <a href="#contact" data-track="hero_get_started" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white bg-blue-600 border border-blue-600 rounded-lg sm:w-auto hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Get Started
                         <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </a> 
-                    <a href="#portfolio" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    <a href="#portfolio" data-track="hero_view_work" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                         View Our Work
                     </a>
                 </div>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="./images/hero.png" alt="hero image">
+                <img src="./images/hero.png" alt="hero image" width="1064" height="832" loading="eager" fetchpriority="high" decoding="async">
             </div>                
         </div>
     </section>
@@ -207,11 +303,11 @@ See README.md for detailed instructions.
                     </ul>
                     <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.</p>
                 </div>
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/feature-1.png" alt="dashboard feature image">
+                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/feature-1.png" alt="dashboard feature image" width="2200" height="1600" loading="lazy" decoding="async">
             </div>
             <!-- Row -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/feature-2.png" alt="feature image 2">
+                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/feature-2.png" alt="feature image 2" width="2200" height="1600" loading="lazy" decoding="async">
                 <div class="text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
                     <p class="mb-8 font-light lg:text-xl">Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
@@ -307,7 +403,7 @@ See README.md for detailed instructions.
                     <p class="text-xl font-medium text-gray-900 md:text-2xl dark:text-white">"Working with JAYIDEVTECH was a game-changer for our business. They delivered a high-quality solution on time and within budget. Their expertise in modern technologies is impressive."</p>
                 </blockquote>
                 <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                    <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture">
+                    <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture" width="24" height="24" loading="lazy" decoding="async">
                     <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                         <div class="pr-3 font-medium text-gray-900 dark:text-white">John Smith</div>
                         <div class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">Product Manager</div>
@@ -361,7 +457,7 @@ See README.md for detailed instructions.
                             <span>Free updates: <span class="font-semibold">6 months</span></span>
                         </li>
                     </ul>
-                    <a href="#" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900">Get started</a>
+                    <a href="#" data-track="pricing_get_started" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900">Get started</a>
                 </div>
                 <!-- Pricing Card -->
                 <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
@@ -399,7 +495,7 @@ See README.md for detailed instructions.
                             <span>Free updates: <span class="font-semibold">24 months</span></span>
                         </li>
                     </ul>
-                    <a href="#" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900">Get started</a>
+                    <a href="#" data-track="pricing_get_started" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900">Get started</a>
                 </div>
                 <!-- Pricing Card -->
                 <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
@@ -437,7 +533,7 @@ See README.md for detailed instructions.
                             <span>Free updates: <span class="font-semibold">36 months</span></span>
                         </li>
                     </ul>
-                    <a href="#" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900">Get started</a>
+                    <a href="#" data-track="pricing_get_started" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-blue-900">Get started</a>
                 </div>
             </div>
         </div>
@@ -545,7 +641,7 @@ See README.md for detailed instructions.
                     
                     <!-- Submit Button -->
                     <div class="flex flex-col sm:flex-row gap-3">
-                        <button type="submit" class="w-full sm:flex-1 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-colors duration-200">
+                        <button type="submit" data-track="contact_submit_click" class="w-full sm:flex-1 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-colors duration-200">
                             Send Message
                         </button>
                         <button type="reset" class="w-full sm:flex-1 text-gray-900 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600 focus:outline-none dark:focus:ring-blue-800 transition-colors duration-200">
@@ -592,7 +688,7 @@ See README.md for detailed instructions.
                             <a href="#" class="hover:underline">Twitter</a>
                         </li>
                         <li class="mb-4">
-                            <a href="#" class="hover:underline">Facebook
+                            <a href="#" class="hover:underline">Facebook</a>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="hover:underline">Contact Us</a>
@@ -651,7 +747,7 @@ See README.md for detailed instructions.
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
             <div class="text-center">
                 <a href="/" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
-                    <img src="./images/logo_jayidevtech.svg" class="h-6 mr-3 sm:h-9" alt="JAYIDEVTECH Logo" />
+                    <img src="./images/logo_jayidevtech.svg" class="h-6 mr-3 sm:h-9" alt="JAYIDEVTECH Logo" width="107" height="24" loading="lazy" decoding="async" />
                 </a>
                 <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024 JAYIDEVTECH™. All Rights Reserved. Building the future of digital solutions.
                 </span>
@@ -690,35 +786,103 @@ See README.md for detailed instructions.
     <!-- Contact Form Handler -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const analyticsConfig = window.JDT_ANALYTICS_CONFIG || {};
+            const measurementId = analyticsConfig.measurementId || '';
             const form = document.getElementById('contact-form');
             const successMessage = document.getElementById('success-message');
-            
-            if (form) {
-                form.addEventListener('submit', function(e) {
-                    // Check if using Formspree (form action contains formspree.io)
-                    if (this.action.includes('formspree') || this.action.includes('YOUR_FORM_ID')) {
-                        // Let Formspree handle it naturally
-                        return true;
+            const mobileMenu = document.getElementById('mobile-menu-2');
+            const mobileMenuToggle = document.querySelector('[data-collapse-toggle="mobile-menu-2"]');
+            const navAnchorLinks = document.querySelectorAll('a[href^="#"]');
+            const trackedElements = document.querySelectorAll('[data-track]');
+
+            function trackEvent(eventName, eventParams) {
+                const canTrack = typeof window.gtag === 'function' && measurementId && measurementId !== 'G-XXXXXXXXXX';
+                if (!canTrack) {
+                    return;
+                }
+                window.gtag('event', eventName, eventParams || {});
+            }
+
+            trackedElements.forEach(function(element) {
+                element.addEventListener('click', function() {
+                    const ctaName = element.getAttribute('data-track') || 'unknown_cta';
+                    trackEvent('cta_click', {
+                        cta_name: ctaName,
+                        page_location: window.location.href,
+                        link_target: element.getAttribute('href') || ''
+                    });
+                });
+            });
+
+            navAnchorLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth < 1024 && mobileMenu && mobileMenuToggle) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
                     }
-                    
-                    // For any other form submission, show success message
-                    e.preventDefault();
-                    
-                    // Show success message
-                    successMessage.classList.remove('hidden');
-                    
-                    // Reset form
-                    form.reset();
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(function() {
-                        successMessage.classList.add('hidden');
-                    }, 5000);
-                    
-                    // Scroll to success message
-                    successMessage.scrollIntoView({ behavior: 'smooth' });
-                    
-                    return false;
+                });
+            });
+
+            if (form && successMessage) {
+                let formStartTracked = false;
+                const formFields = form.querySelectorAll('input, textarea');
+
+                formFields.forEach(function(field) {
+                    field.addEventListener('focus', function() {
+                        if (!formStartTracked) {
+                            trackEvent('form_start', {
+                                form_id: 'contact-form',
+                                page_location: window.location.href
+                            });
+                            formStartTracked = true;
+                        }
+                    });
+                });
+
+                form.addEventListener('submit', function(e) {
+                    const action = this.action || '';
+                    const isFormspreeEndpoint = action.includes('formspree.io/f/');
+                    const isPlaceholderEndpoint = action.includes('YOUR_FORM_ID');
+
+                    if (isPlaceholderEndpoint) {
+                        trackEvent('generate_lead', {
+                            form_id: 'contact-form',
+                            submission_type: 'demo_mode',
+                            submission_status: 'success'
+                        });
+                        e.preventDefault();
+                        successMessage.classList.remove('hidden');
+                        form.reset();
+                        setTimeout(function() {
+                            successMessage.classList.add('hidden');
+                        }, 5000);
+                        successMessage.scrollIntoView({ behavior: 'smooth' });
+                        return false;
+                    }
+
+                    if (!isFormspreeEndpoint) {
+                        trackEvent('generate_lead', {
+                            form_id: 'contact-form',
+                            submission_type: 'custom_endpoint',
+                            submission_status: 'success'
+                        });
+                        e.preventDefault();
+                        successMessage.classList.remove('hidden');
+                        form.reset();
+                        setTimeout(function() {
+                            successMessage.classList.add('hidden');
+                        }, 5000);
+                        successMessage.scrollIntoView({ behavior: 'smooth' });
+                        return false;
+                    }
+
+                    trackEvent('generate_lead', {
+                        form_id: 'contact-form',
+                        submission_type: 'formspree',
+                        submission_status: 'submitted'
+                    });
+
+                    return true;
                 });
             }
         });

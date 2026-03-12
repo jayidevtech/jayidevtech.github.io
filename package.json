@@ -4,18 +4,46 @@
   "description": "Professional landing page for JAYIDEVTECH - Software development services",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/css/style.css -o ./public/style.css --watch",
-    "build": "tailwindcss -i ./src/css/style.css -o ./public/style.css",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit",
+    "lint": "eslint . --ext .ts,.vue",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier \"src/**/*.{ts,vue,css}\" \"*.{js,cjs,mjs,json,html}\" --write",
+    "format:check": "prettier \"src/**/*.{ts,vue,css}\" \"*.{js,cjs,mjs,json,html}\" --check",
+    "check": "npm run type-check && npm run lint && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["jayidevtech", "landing-page", "tailwindcss", "flowbite"],
+  "keywords": [
+    "jayidevtech",
+    "landing-page",
+    "tailwindcss",
+    "flowbite"
+  ],
   "author": "JAYIDEVTECH",
   "license": "ISC",
+  "dependencies": {
+    "vue": "^3.5.30"
+  },
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@tailwindcss/cli": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitejs/plugin-vue": "^5.2.4",
     "autoprefixer": "^10.4.27",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^9.32.0",
     "flowbite": "^4.0.1",
     "postcss": "^8.5.8",
-    "tailwindcss": "^4.2.1"
+    "prettier": "^3.8.1",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.5.4",
+    "vite": "^6.4.1",
+    "vue-eslint-parser": "^9.4.3",
+    "vue-tsc": "^3.2.5"
   }
 }
