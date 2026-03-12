@@ -1,0 +1,21 @@
+{
+  "name": "jayidevtech-landing-page",
+  "version": "1.0.0",
+  "description": "Professional landing page for JAYIDEVTECH - Software development services",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/style.css -o ./public/style.css --watch",
+    "build": "tailwindcss -i ./src/css/style.css -o ./public/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["jayidevtech", "landing-page", "tailwindcss", "flowbite"],
+  "author": "JAYIDEVTECH",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "autoprefixer": "^10.4.27",
+    "flowbite": "^4.0.1",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1"
+  }
+}

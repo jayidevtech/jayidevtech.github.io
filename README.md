@@ -2,187 +2,279 @@
 
 ![JAYIDEVTECH Landing Page](./images/logo_jayidevtech.svg)
 
-A professional landing page for JAYIDEVTECH showcasing our software development services. Built with modern web technologies using **Tailwind CSS CDN** and **Flowbite CDN** for a responsive, fast, and beautiful user experience.
+A professional landing page for JAYIDEVTECH showcasing our software development services. Built with modern web technologies using **Tailwind CSS** (via build process) and **Flowbite** component library for a responsive, fast, and beautiful user experience.
 
-## ✨ Pure Static / CDN Version
+## ✨ Build-Based Setup
 
-**No build process required!** This version uses CDN links - just open in browser or upload to any hosting.
+This version uses a modern build pipeline with Tailwind CSS CLI for optimized CSS output. Requires Node.js and npm, but provides better performance and maintainability.
 
 ## 🚀 Features
 
 - **Responsive Design** - Works perfectly on all devices
 - **Modern UI/UX** - Clean and professional interface
-- **Fast Performance** - Optimized for speed
+- **Fast Performance** - Optimized CSS via Tailwind build process
 - **SEO Friendly** - Proper meta tags and semantic HTML
-- **Dark Mode Support** - Automatic based on system preferences
+- **Dark Mode Support** - Full dark mode implementation
 - **Smooth Animations** - Engaging user interactions
-- **Zero Build** - No npm, no Node.js, no compilation needed!
-- **Deploy Anywhere** - Works on any hosting (cPanel, Netlify, Vercel, GitHub Pages, etc)
+- **Tailwind CSS** - Utility-first CSS framework
+- **Flowbite Components** - Pre-built interactive components
+- **Developer Friendly** - Easy to customize and extend
 
 ## 🛠️ Built With
 
-- [Tailwind CSS](https://tailwindcss.com/) - Via CDN (cdn.tailwindcss.com)
-- [Flowbite](https://flowbite.com/) - Via CDN (cdn.jsdelivr.net)
-- HTML5 & Pure JavaScript
-- No build tools required!
+- [Tailwind CSS v4.2.1](https://tailwindcss.com/) - Utility-first CSS framework
+- [Flowbite v4.0.1](https://flowbite.com/) - Component library built on Tailwind
+- [PostCSS](https://postcss.org/) - CSS processing
+- HTML5 & JavaScript
+- Node.js & npm (build tools)
 
 ## 🎯 Quick Start
 
+### Prerequisites
+- Node.js (v14+)
+- npm (v6+)
+
+### Installation
+
+```bash
+# Clone or download the project
+cd jayidevtech-landing-page
+
+# Install dependencies
+npm install
+
+# Build CSS (first time)
+npm run build
+
+# For development (watch mode)
+npm run dev
+```
+
 ### Local Testing
 
-**Option 1: Open directly in browser**
 ```bash
-# Simply open the file
-open index.html
-```
-
-**Option 2: Use a simple HTTP server**
-```bash
-# Using Python (if installed)
+# Serve the public folder
+cd public
 python3 -m http.server 8000
 
-# Using PHP (if installed)
-php -S localhost:8000
-
-# Then open: http://localhost:8000
+# Open browser: http://localhost:8000
 ```
+
+### Build Process
+
+The project uses Tailwind CSS CLI to compile styles:
+
+```bash
+# Build once
+npm run build
+
+# Watch for changes (development)
+npm run dev
+```
+
+This generates `public/style.css` from `src/css/style.css`
 
 ### Deploy to Production
 
-**No build required!** Just upload these files:
+**First, build the project:**
 
-#### Files to Upload:
+```bash
+npm run build
 ```
-✅ index.html
-✅ images/ (folder lengkap)
-✅ favicon-32x32.png
-✅ favicon-16x16.png
-✅ apple-touch-icon.png
-✅ site.webmanifest
-✅ robots.txt (optional, for SEO)
-✅ sitemap.xml (optional, for SEO)
-```
+
+This creates the `public/` folder with:
+- `public/index.html` - Compiled HTML
+- `public/style.css` - Compiled CSS (optimized)
+- `public/js/` - JavaScript files
+- `public/images/` - Image assets
+
+**Upload the `public/` folder contents to your hosting:**
 
 #### Deployment Options:
 
-**1. Vercel (Gratis)**
+**1. Vercel (Recommended - Free tier)**
 ```bash
-# Install Vercel CLI (one time only)
 npm install -g vercel
-
-# Deploy
-vercel --prod
+vercel deploy
 ```
 
-**2. Netlify (Gratis)**
-- Drag & drop ke [Netlify Drop](https://app.netlify.com/drop)
-- Atau gunakan Netlify CLI
-
-**3. GitHub Pages (Gratis)**
+**2. Netlify**
 ```bash
-# Push to GitHub
+npm install -g netlify-cli
+netlify deploy --prod --dir=public
+```
+
+**3. GitHub Pages**
+```bash
 git add .
 git commit -m "Deploy landing page"
 git push
-
-# Enable GitHub Pages di repository settings
+# Enable GitHub Pages in repository settings
 ```
 
-**4. cPanel / Traditional Hosting**
-- Upload semua files via FTP/File Manager
-- Extract di folder `public_html/`
+**4. Traditional Hosting (cPanel/FTP)**
+- Build locally: `npm run build`
+- Upload `public/` folder contents via FTP/File Manager
+- Ensure `index.html` is in root directory
 
 ## 📁 Project Structure
 
 ```
 jayidevtech-landing-page/
-├── index.html              # Main HTML file (CDN version)
-├── images/                 # Image assets
-│   ├── hero.png
-│   ├── feature-1.png
-│   ├── feature-2.png
-│   └── logo_jayidevtech.svg
-├── favicon-32x32.png       # Favicon
-├── favicon-16x16.png
-├── apple-touch-icon.png
-├── site.webmanifest
-├── robots.txt              # SEO
-├── sitemap.xml             # SEO
-├── README.md               # This file
-├── CDN-README.md           # Quick start untuk CDN
-├── STATIC-vs-BUILD.md      # Comparison CDN vs Build
-├── DEPLOYMENT.md           # Deployment guide
-└── CHECKLIST.md            # Pre-deployment checklist
+├── src/
+│   ├── index.html              # Source HTML file
+│   ├── css/
+│   │   └── style.css           # Tailwind directives
+│   └── js/
+│       └── flowbite.min.js     # Flowbite component library
+├── public/                     # Build output folder
+│   ├── index.html              # Compiled HTML
+│   ├── style.css               # Compiled CSS (generated by npm run build)
+│   ├── js/               
+│   │   └── flowbite.min.js
+│   ├── images/                 # Image assets
+│   │   ├── hero.png
+│   │   ├── feature-1.png
+│   │   ├── feature-2.png
+│   │   └── logo_jayidevtech.svg
+├── images/                     # Source images
+├── package.json                # npm configuration
+├── tailwind.config.js          # Tailwind configuration
+├── postcss.config.js           # PostCSS configuration
+├── robots.txt                  # SEO robots file
+├── sitemap.xml                 # SEO sitemap
+├── README.md                   # This file
+├── DEPLOYMENT.md               # Deployment guide
+├── CHECKLIST.md                # Pre-launch checklist
+├── PROJECT_ANALYSIS.md         # Technical analysis
+├── ACTIONABLE_CHECKLIST.md     # Step-by-step development plan
+└── docs/
+    ├── CDN-LEGACY.md           # Historical CDN approach
+    └── DECISION-HISTORY.md     # Decision documentation
 ```
 
 ## 🎨 Customization
 
-### Mengubah Konten
-Simply edit `index.html` dengan text editor favorit Anda:
+### Editing Content
 
-1. **Hero Section** - Edit tagline dan deskripsi (line ~85-95)
-2. **Services** - Update layanan yang ditawarkan (line ~130+)
-3. **Pricing** - Sesuaikan paket harga (line ~400+)
-4. **Contact** - Ganti email dan info kontak (line ~570+)
+Edit `src/index.html` with your favorite text editor:
 
-### Mengubah Warna
-Edit bagian `<script>` di dalam `<head>`:
+1. **Hero Section** - Update tagline and description
+2. **Services** - Modify service offerings
+3. **Pricing** - Update pricing plans
+4. **Contact** - Add your contact information
+5. **Footer** - Update company information
 
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                primary: {
-                    "500": "#3b82f6",  // Ubah kode warna ini
-                    // ...
-                }
-            }
-        }
-    }
-}
+Then rebuild:
+```bash
+npm run build
 ```
 
-### Menambah Section Baru
-Cukup tambahkan HTML baru di `<body>`. Semua Tailwind utility classes langsung bisa digunakan!
+### Styling & Colors
+
+Tailwind CSS utility classes are used throughout. To customize:
+
+1. **Edit `tailwind.config.js`** for global configuration
+2. **Add custom CSS** to `src/css/style.css`
+3. **Use Tailwind directives** like `@apply` for custom classes
+4. **Rebuild** with `npm run build`
+
+### Adding New Sections
+
+Simply add new HTML to `src/index.html`. Tailwind utility classes work immediately after rebuilding.
+
+Example:
+```html
+<section id="new-section" class="py-12 bg-gray-50">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8">New Section</h2>
+    <!-- Your content here -->
+  </div>
+</section>
+```
+
+Then rebuild:
+```bash
+npm run build
+```
 
 ## 📚 Documentation
 
-- **[CDN-README.md](./CDN-README.md)** - Quick start guide untuk CDN version
-- **[STATIC-vs-BUILD.md](./STATIC-vs-BUILD.md)** - Perbandingan CDN vs Build approach  
+- **[ACTIONABLE_CHECKLIST.md](./ACTIONABLE_CHECKLIST.md)** - Step-by-step development and deployment guide
+- **[PROJECT_ANALYSIS.md](./PROJECT_ANALYSIS.md)** - Complete technical analysis and development plan
 - **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Detailed deployment instructions
-- **[CHECKLIST.md](./CHECKLIST.md)** - Pre-publication checklist
+- **[CHECKLIST.md](./CHECKLIST.md)** - Pre-launch verification checklist
 
 ## ❓ FAQ
 
-### Apakah perlu install Node.js atau npm?
-**Tidak!** Versi ini pure static dengan CDN. Tidak butuh npm sama sekali.
+### Do I need to install Node.js?
+**Yes**, for development. Download from [nodejs.org](https://nodejs.org/). Not needed on production server.
 
-### Apakah CDN aman untuk production?
-**Ya!** Tailwind CDN dan Flowbite CDN sangat reliable dan digunakan jutaan website.
+### How do I make changes?
+1. Edit files in `src/` folder
+2. Run `npm run build`
+3. Deploy `public/` folder to hosting
 
-### Bagaimana cara update konten?
-Edit file `index.html` → Upload ke hosting → Done!
+### What's the difference between src/ and public/?
+- **src/** - Source files (HTML template, CSS directives)
+- **public/** - Compiled output (ready to deploy)
 
-### Apakah bisa custom styling?
-**Bisa!** Edit inline Tailwind config di `<script>` tag atau tambahkan custom CSS.
+### Can I use this without building?
+See [docs/CDN-LEGACY.md](./docs/CDN-LEGACY.md) for CDN-based approach alternatives.
 
-### Loading lambat karena CDN?
-CDN biasanya lebih cepat karena cached globally. Tapi jika ingin self-host, baca [STATIC-vs-BUILD.md](./STATIC-vs-BUILD.md).
+### How do I preview changes locally?
+```bash
+npm run dev   # Watch for changes
+cd public
+python3 -m http.server 8000
+# Open http://localhost:8000
+```
+
+### Is the CSS optimized?
+Yes! Tailwind CSS build process removes unused styles and optimizes output.
+
+### Can I add custom CSS?
+Yes, add it to `src/css/style.css` and rebuild with `npm run build`
 
 ## 🆘 Troubleshooting
 
-**Styling tidak muncul?**
-- Pastikan koneksi internet aktif (CDN butuh internet)
-- Check browser console untuk errors
+### Build fails with "npm: command not found"
+Install Node.js from [nodejs.org](https://nodejs.org/)
 
-**Images tidak tampil?**
-- Cek path relatif (`./images/nama-file.png`)
-- Pastikan folder images ter-upload
+### Styling not applied
+```bash
+# Rebuild CSS
+npm run build
 
-**Interactive elements (accordion, modal) tidak bekerja?**
-- Pastikan Flowbite JS script ter-load
-- Check browser console untuk JavaScript errors
+# Verify public/style.css was created
+ls -la public/style.css
+```
+
+### Changes not reflecting
+1. Edit `src/index.html` (not `public/index.html`)
+2. Run `npm run build`
+3. Check `public/style.css` was updated
+4. Refresh browser (hard refresh: Cmd+Shift+R or Ctrl+Shift+R)
+
+### Images not showing
+- Ensure images are in `public/images/` folder
+- Check image paths in HTML use `./images/filename.ext`
+- Verify `npm run build` completed successfully
+
+### Local server not starting
+```bash
+# Try different port if 8000 is in use
+python3 -m http.server 8001
+```
+
+### Port 8000 already in use
+```bash
+# Find process using port 8000
+lsof -i :8000
+
+# Kill the process
+kill -9 <PID>
+```
 
 ## 📄 License
 

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <!--
 ====================================================================
-JAYIDEVTECH LANDING PAGE - CDN VERSION (NO BUILD REQUIRED!)
+JAYIDEVTECH LANDING PAGE - TAILWIND CSS BUILD VERSION
 ====================================================================
-This version uses CDN links for Tailwind CSS and Flowbite.
-NO npm, NO node_modules, NO build process needed!
+This version uses Tailwind CSS CLI for optimized CSS output.
 
-Just open this file in any browser or upload to any web hosting.
+Required steps:
+1. npm install (install dependencies)
+2. npm run build (compile CSS)
+3. Deploy public/ folder to hosting
 
-Files needed:
-- index-cdn.html (this file)
-- images/ folder
-- favicon files
+For development:
+npm run dev (watch mode)
 
-That's it! No package.json, no npm install, no npm run build!
+See README.md for detailed instructions.
 ====================================================================
 -->
- <html lang="id">
+<html lang="id">
 <head>
     <link rel="canonical" href="https://jayidevtech.com/" />
     <meta charset="UTF-8">
@@ -50,59 +50,7 @@ That's it! No package.json, no npm install, no npm run build!
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
-                    }
-                },
-                fontFamily: {
-                    'body': [
-                'Inter', 
-                'ui-sans-serif', 
-                'system-ui', 
-                '-apple-system', 
-                'Segoe UI', 
-                'Roboto', 
-                'Helvetica Neue', 
-                'Arial', 
-                'Noto Sans', 
-                'sans-serif', 
-                'Apple Color Emoji', 
-                'Segoe UI Emoji', 
-                'Segoe UI Symbol', 
-                'Noto Color Emoji'
-            ],
-                    'sans': [
-                'Inter', 
-                'ui-sans-serif', 
-                'system-ui', 
-                '-apple-system', 
-                'Segoe UI', 
-                'Roboto', 
-                'Helvetica Neue', 
-                'Arial', 
-                'Noto Sans', 
-                'sans-serif', 
-                'Apple Color Emoji', 
-                'Segoe UI Emoji', 
-                'Segoe UI Symbol', 
-                'Noto Color Emoji'
-            ]
-                }
-            }
-        }
-    </script>
-    
-    <!-- Flowbite via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="../public/style.css">
     
 </head>
 <body>
@@ -685,7 +633,6 @@ That's it! No package.json, no npm install, no npm run build!
             </div>
         </div>
     </footer>
-    <!-- Flowbite JavaScript via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="./js/flowbite.min.js"></script>
 </body>
 </html>
