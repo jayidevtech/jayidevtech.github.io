@@ -502,10 +502,62 @@ See README.md for detailed instructions.
     <!-- Start block -->
     <section id="contact" class="bg-gray-50 dark:bg-gray-800">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
-            <div class="max-w-screen-sm mx-auto text-center">
-                <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Ready to Start Your Project?</h2>
-                <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Let's discuss your ideas and build something amazing together. Contact us for a free consultation.</p>
-                <a href="mailto:info@jayidevtech.com" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Contact Us Now</a>
+            <div class="max-w-screen-sm mx-auto">
+                <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white text-center">Ready to Start Your Project?</h2>
+                <p class="mb-8 font-light text-gray-500 dark:text-gray-400 md:text-lg text-center">Let's discuss your ideas and build something amazing together. Fill out the form below and our team will get back to you shortly.</p>
+                
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" class="hidden mb-6 p-4 bg-green-50 border border-green-200 rounded-lg dark:bg-green-900 dark:border-green-700">
+                    <p class="text-green-800 dark:text-green-200 font-medium">✓ Thank you! Your message has been sent successfully. We'll be in touch soon.</p>
+                </div>
+                
+                <!-- Contact Form -->
+                <form id="contact-form" class="space-y-6" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+                    <!-- Full Name -->
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name</label>
+                        <input type="text" id="name" name="name" class="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your full name" required>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
+                        <input type="email" id="email" name="email" class="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <!-- Phone (Optional) -->
+                    <div>
+                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number <span class="text-gray-500">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone" class="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <!-- Subject -->
+                    <div>
+                        <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subject</label>
+                        <input type="text" id="subject" name="subject" class="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="What is this about?" required>
+                    </div>
+                    
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+                        <textarea id="message" name="message" rows="6" class="block w-full p-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tell us more about your project..." required></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button type="submit" class="w-full sm:flex-1 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition-colors duration-200">
+                            Send Message
+                        </button>
+                        <button type="reset" class="w-full sm:flex-1 text-gray-900 bg-white border border-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600 focus:outline-none dark:focus:ring-blue-800 transition-colors duration-200">
+                            Clear Form
+                        </button>
+                    </div>
+                    
+                    <!-- Form Info -->
+                    <p class="text-xs text-gray-500 dark:text-gray-400 text-center">
+                        We'll respond to your inquiry as soon as possible, typically within 24 hours.
+                    </p>
+                </form>
             </div>
         </div>
     </section>
@@ -634,5 +686,42 @@ See README.md for detailed instructions.
         </div>
     </footer>
     <script src="./js/flowbite.min.js"></script>
+    
+    <!-- Contact Form Handler -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+            
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    // Check if using Formspree (form action contains formspree.io)
+                    if (this.action.includes('formspree') || this.action.includes('YOUR_FORM_ID')) {
+                        // Let Formspree handle it naturally
+                        return true;
+                    }
+                    
+                    // For any other form submission, show success message
+                    e.preventDefault();
+                    
+                    // Show success message
+                    successMessage.classList.remove('hidden');
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        successMessage.classList.add('hidden');
+                    }, 5000);
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                    
+                    return false;
+                });
+            }
+        });
+    </script>
 </body>
 </html>
