@@ -64,6 +64,15 @@ netlify deploy --prod --dir=dist
 Use a static deployment workflow that publishes files from `dist/`.
 (Do not deploy from `src/`.)
 
+**Required repository setting:**
+- Go to **Settings → Pages**
+- On **Build and deployment**, set **Source = GitHub Actions**
+- Do **not** use **Deploy from a branch** for this Vue + Vite setup
+
+After pushing, verify:
+- Latest run in **Actions → Deploy GitHub Pages** is green
+- Live page source contains `/assets/index-*.js` (not `/src/main.ts`)
+
 ### Option 4: Traditional Hosting (cPanel/FTP)
 
 Upload **contents of `dist/`** to `public_html/`:

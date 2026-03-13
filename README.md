@@ -137,8 +137,10 @@ netlify deploy --prod --dir=dist
 git add .
 git commit -m "Deploy landing page"
 git push
-# Enable GitHub Pages in repository settings
+# In GitHub: Settings -> Pages -> Source = GitHub Actions
 ```
+
+Important: for this Vue + Vite app, do not use **Deploy from a branch**. If branch mode is used, production may serve `index.html` source (`/src/main.ts`) and show blank screen.
 
 **4. Traditional Hosting (cPanel/FTP)**
 - Build locally: `npm run build`
