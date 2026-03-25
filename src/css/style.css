@@ -1,1 +1,49 @@
 @import 'tailwindcss';
+
+:root {
+	--color-primary: #00890d;
+	--color-primary-dark: #006b0a;
+	--color-primary-ring: rgba(0, 137, 13, 0.18);
+	--color-secondary: #efc000;
+	--color-secondary-dark: #d2a900;
+	--color-secondary-ring: rgba(239, 192, 0, 0.22);
+}
+
+.bg-blue-600,
+.dark .dark\:bg-blue-600 {
+	background-color: var(--color-primary) !important;
+}
+
+.hover\:bg-blue-700:hover,
+.dark .dark\:hover\:bg-blue-700:hover {
+	background-color: var(--color-primary-dark) !important;
+}
+
+.border-blue-600,
+.focus\:border-blue-500:focus,
+.dark .dark\:focus\:border-blue-500:focus {
+	border-color: var(--color-primary) !important;
+}
+
+.text-blue-600,
+.text-blue-500,
+.dark .dark\:text-blue-500,
+.dark .dark\:text-blue-400 {
+	color: var(--color-secondary) !important;
+}
+
+.hover\:text-blue-800:hover,
+.hover\:text-blue-700:hover,
+.lg\:hover\:text-blue-700:hover,
+.dark .dark\:hover\:text-blue-700:hover {
+	color: var(--color-secondary-dark) !important;
+}
+
+.focus\:ring-blue-200:focus,
+.focus\:ring-blue-300:focus,
+.focus\:ring-blue-500:focus,
+.dark .dark\:focus\:ring-blue-500:focus,
+.dark .dark\:focus\:ring-blue-800:focus,
+.dark .dark\:focus\:ring-blue-900:focus {
+	--tw-ring-color: var(--color-primary-ring) !important;
+}

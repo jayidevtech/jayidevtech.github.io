@@ -9,6 +9,7 @@ declare global {
     ) => void;
     JDT_ANALYTICS_CONFIG?: {
       measurementId?: string;
+      formEndpoint?: string;
     };
   }
 }

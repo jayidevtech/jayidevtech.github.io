@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JAYIDEVTECH</title>
+    <script>
+      (function redirectToSpaEntry() {
+        var path = window.location.pathname;
+        var query = window.location.search;
+        var hash = window.location.hash;
+        var basePath = '/';
+
+        var normalizedPath = path.startsWith(basePath) ? path.slice(basePath.length) : path;
+        var target = basePath + '?p=/' + normalizedPath + (query ? '&q=' + encodeURIComponent(query.slice(1)) : '') + hash;
+
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

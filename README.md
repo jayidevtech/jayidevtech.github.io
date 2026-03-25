@@ -220,7 +220,7 @@ Add new section markup in `src/components/LandingContent.vue`.
 Example:
 ```html
 <section id="new-section" class="py-12 bg-gray-50">
-  <div class="max-w-screen-xl mx-auto px-4">
+  <div class="max-w-7xl mx-auto px-4">
     <h2 class="text-3xl font-bold mb-8">New Section</h2>
     <!-- Your content here -->
   </div>
