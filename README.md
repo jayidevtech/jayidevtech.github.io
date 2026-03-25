@@ -1,6 +1,6 @@
 # JAYIDEVTECH - Professional Landing Page
 
-![JAYIDEVTECH Landing Page](./static/images/logo_jayidevtech.svg)
+![JAYIDEVTECH Landing Page](./static/images/jayidevtech-logo.png)
 
 A professional landing page for JAYIDEVTECH showcasing our software development services. Built with **Vue 3 + Vite**, **Tailwind CSS**, and **Flowbite** for a responsive, fast, and maintainable experience.
 

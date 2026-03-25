@@ -1,15 +1,15 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "JAYIDEVTECH",
+    "short_name": "JDT",
     "icons": [
         {
-            "src": "/images/icons/android-chrome-192x192.png",
+            "src": "/images/icons/android-icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/images/icons/android-chrome-512x512.png",
-            "sizes": "512x512",
+            "src": "/images/icons/android-icon-310x310.png",
+            "sizes": "310x310",
             "type": "image/png"
         }
     ],

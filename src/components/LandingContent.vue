@@ -4,8 +4,8 @@
       <div class="flex flex-wrap items-center justify-between max-w-7xl px-4 mx-auto">
         <a href="/" class="flex items-center">
           <img
-            src="/images/logo_jayidevtech.svg"
-            class="h-6 mr-3 sm:h-9"
+            src="/images/jayidevtech-logo.png"
+            class="w-auto h-6 mr-3 sm:h-9 shrink-0 object-contain object-center"
             alt="JAYIDEVTECH Logo"
             width="107"
             height="24"
@@ -159,9 +159,15 @@
           <a
             href="#portfolio"
             data-track="hero_view_work"
-            class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 md:mb-0 ml-2 text-sm font-medium text-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
           >
             View Our Work
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-5 h-5 ml-2 -mr-1">
+              <path
+                fill="currentColor"
+                d="M20 6c.58 0 1.05.2 1.42.59c.38.41.58.86.58 1.41v11c0 .55-.2 1-.58 1.41c-.37.39-.84.59-1.42.59H4c-.58 0-1.05-.2-1.42-.59C2.2 20 2 19.55 2 19V8c0-.55.2-1 .58-1.41C2.95 6.2 3.42 6 4 6h4V4c0-.58.2-1.05.58-1.42C8.95 2.2 9.42 2 10 2h4c.58 0 1.05.2 1.42.58c.38.37.58.84.58 1.42v2zM4 8v11h16V8zm10-2V4h-4v2z"
+              />
+            </svg>
           </a>
         </div>
       </div>
@@ -1502,8 +1508,8 @@
           class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
         >
           <img
-            src="/images/logo_jayidevtech.svg"
-            class="h-6 mr-3 sm:h-9"
+            src="/images/jayidevtech-logo.png"
+            class="w-auto h-6 mr-3 sm:h-9 shrink-0 object-contain object-center"
             alt="JAYIDEVTECH Logo"
             width="107"
             height="24"
@@ -1590,3 +1596,89 @@
 
   <!-- Contact Form Handler -->
 </template>
+
+<style scoped>
+:global(:root) {
+  --color-primary: #00890d;
+  --color-primary-dark: #006b0a;
+  --color-primary-ring: rgba(0, 137, 13, 0.18);
+  --color-secondary: #efc000;
+  --color-secondary-dark: #d2a900;
+  --color-secondary-ring: rgba(239, 192, 0, 0.22);
+}
+
+header nav [data-track='nav_get_started'],
+#home [data-track='hero_get_started'],
+#pricing [data-track='pricing_get_started'],
+#contact [data-track='contact_submit_click'] {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+
+header nav [data-track='nav_get_started']:hover,
+header nav [data-track='nav_get_started']:focus-visible,
+#home [data-track='hero_get_started']:hover,
+#home [data-track='hero_get_started']:focus-visible,
+#pricing [data-track='pricing_get_started']:hover,
+#pricing [data-track='pricing_get_started']:focus-visible,
+#contact [data-track='contact_submit_click']:hover,
+#contact [data-track='contact_submit_click']:focus-visible {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark) !important;
+  box-shadow: 0 0 0 4px var(--color-primary-ring) !important;
+}
+
+header nav a[aria-current='page'] {
+  background-color: var(--color-primary) !important;
+}
+
+header nav ul a:hover,
+header nav ul a:focus-visible,
+[aria-label='Breadcrumb'] a:hover,
+[aria-label='Breadcrumb'] a:focus-visible {
+  color: var(--color-primary) !important;
+}
+
+#home [data-track='hero_view_work'],
+#contact button[type='reset'] {
+  background-color: var(--color-secondary) !important;
+  border-color: var(--color-secondary) !important;
+  color: #ffffff !important;
+}
+
+#home [data-track='hero_view_work']:hover,
+#home [data-track='hero_view_work']:focus-visible,
+#contact button[type='reset']:hover,
+#contact button[type='reset']:focus-visible {
+  background-color: var(--color-secondary-dark) !important;
+  border-color: var(--color-secondary-dark) !important;
+  box-shadow: 0 0 0 4px var(--color-secondary-ring) !important;
+}
+
+#services .shrink-0,
+#about p.text-lg.font-medium,
+#about a.inline-flex,
+#about .w-10.h-10 {
+  color: var(--color-secondary) !important;
+}
+
+#about a.inline-flex:hover,
+#about a.inline-flex:focus-visible {
+  color: var(--color-secondary-dark) !important;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 4px var(--color-primary-ring) !important;
+  outline: none !important;
+}
+
+@media (min-width: 1024px) {
+  header nav a[aria-current='page'] {
+    background-color: transparent !important;
+    color: var(--color-primary) !important;
+  }
+}
+</style>

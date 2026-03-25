@@ -131,7 +131,7 @@ Minimal files yang perlu di-deploy:
 
 1. **Email Address**: Ganti placeholder email dengan email JAYIDEVTECH yang aktual
 2. **Domain URLs**: Setelah punya domain, find & replace "jayidevtech.com" dengan domain aktual
-3. **Company Logo**: Pastikan logo_jayidevtech.svg sudah final
+3. **Company Logo**: Pastikan jayidevtech-logo.png sudah final
 4. **Social Media**: Update social media links di footer jika diperlukan
 
 ## 🎉 Status
