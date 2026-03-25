@@ -106,6 +106,80 @@ export const translations: Record<Locale, Record<string, string>> = {
       'Aplikasi mobile pembelajaran interaktif dengan progress tracking, kuis adaptif, dan notifikasi aktivitas.',
     portfolio_project_6_start: 'Sep 2023',
     portfolio_project_6_end: 'Apr 2024',
+    portfolio_rekapuang_desc:
+      'Catat pemasukan, pengeluaran, utang, dan laporan keuangan harian/bulanan. Fitur ekspor data ke Excel dan PDF untuk analisis lebih lanjut.',
+    portfolio_project_02_desc:
+      'Aplikasi mobile point-of-sale untuk outlet F&B dengan workflow kasir, pencetakan kwitansi, dan ringkasan pendapatan harian.',
+    portfolio_project_03_desc:
+      'Portal bisnis internal untuk persetujuan dokumen, akses berbasis peran, dan pelaporan KPI bulanan.',
+    portfolio_project_04_desc:
+      'Aplikasi mobile operasi armada dengan checklist rute, pencatatan geolokasi, dan modul komunikasi dispatch.',
+    portfolio_project_05_desc:
+      'Website manajemen rekrutmen mendukung tracking pipeline pelamar dan otomasi tahap interview.',
+    portfolio_project_06_desc:
+      'Aplikasi mobile pembelajaran interaktif dengan kuis adaptif, notifikasi push, dan monitoring progress.',
+    portfolio_project_07_desc:
+      'Website kesehatan untuk penjadwalan appointment, permintaan rekam medis, dan messaging aman dengan dokter.',
+    portfolio_project_08_desc:
+      'Aplikasi pengiriman last-mile dengan pengelompokan tugas, upload bukti pengiriman, dan navigasi rute in-app.',
+    portfolio_project_09_desc:
+      'Dashboard analitik pembayaran untuk merchant dengan laporan settlement dan fitur monitoring transaksi.',
+    portfolio_project_10_desc:
+      'Aplikasi mobile reservasi perjalanan mencakup pencarian paket, manajemen itinerary, dan dompet tiket digital.',
+    portfolio_project_11_desc:
+      'Modul frontend web ERP dengan workflow procurement, manajemen vendor, dan layar audit trail.',
+    portfolio_project_12_desc:
+      'Aplikasi mobile layanan utilitas dengan pengingat pembayaran tagihan dan pengajuan laporan gangguan.',
+    portfolio_project_13_desc:
+      'Website studio kreatif menampilkan galeri dinamis, permintaan booking, dan update konten berbasis CMS.',
+    portfolio_project_14_desc:
+      'Aplikasi keanggotaan fitness dengan booking kelas, scan QR kehadiran, dan riwayat workout personal.',
+    portfolio_project_15_desc:
+      'Website supply chain untuk distributor kopi dengan lifecycle purchase order dan visibility warehouse.',
+    portfolio_project_16_desc:
+      'Aplikasi layanan residential untuk akses pengunjung, booking fasilitas, dan notifikasi broadcast darurat.',
+    portfolio_project_17_desc:
+      'Website analitik agritech menampilkan trend sensor, proyeksi panen, dan insight operasi pertanian.',
+    portfolio_project_18_desc:
+      'Aplikasi transportasi urban dengan booking perjalanan, estimasi tarif, dan pelacakan kedatangan driver real-time.',
+    portfolio_project_19_desc:
+      'Website operasi legal untuk template kontrak, routing persetujuan, dan penyimpanan dokumen compliance.',
+    portfolio_project_20_desc:
+      'Aplikasi mobile manajemen event dengan pemindaian tiket, komunikasi peserta, dan kontrol agenda pembicara.',
+    portfolio_project_21_desc:
+      'Revamp website universitas dengan corong admisi, halaman beasiswa, dan blok konten multilingual.',
+    portfolio_project_22_desc:
+      'Aplikasi mobile appointment klinik dengan monitoring antrian, jadwal reminder, dan profil akun aman.',
+    portfolio_project_23_desc:
+      'Website pemesanan grosir dengan harga bertingkat, segmentasi katalog, dan ekspor riwayat pembelian.',
+    portfolio_project_24_desc:
+      'Aplikasi operasi logistik untuk update status pengiriman, penyelesaian checklist, dan log handover warehouse.',
+    portfolio_rekapuang_feature_1: 'Pencatatan pemasukan dan pengeluaran',
+    portfolio_rekapuang_feature_2: 'Ekspor laporan ke Excel/PDF',
+    portfolio_rekapuang_feature_3: 'Ringkasan keuangan harian dan bulanan',
+    portfolio_project_02_feature_1: 'Workflow kasir untuk outlet F&B',
+    portfolio_project_02_feature_2: 'Pencetakan struk',
+    portfolio_project_02_feature_3: 'Rekap pendapatan harian',
+    portfolio_project_05_feature_1: 'Pipeline kandidat',
+    portfolio_project_05_feature_2: 'Automasi tahapan interview',
+    portfolio_project_05_feature_3: 'Evaluasi pelamar berbasis scoring',
+    projects_page_title: 'Semua Project',
+    projects_showing_prefix: 'Menampilkan',
+    projects_showing_suffix: 'project selesai dan berjalan.',
+    projects_back_to_landing: 'Kembali ke Landing',
+    project_detail_back_to_projects: 'Kembali ke Daftar Project',
+    project_detail_not_found_title: 'Project tidak ditemukan',
+    project_detail_not_found_prefix: 'Maaf, project dengan ID',
+    project_detail_not_found_suffix: 'tidak tersedia.',
+    project_detail_about: 'Tentang Project',
+    project_detail_features: 'Fitur Utama',
+    project_detail_id: 'ID Project',
+    project_detail_duration: 'Durasi',
+    project_detail_visit_landing: 'Kunjungi Landing Page',
+    project_detail_cta_title: 'Tertarik dengan project ini?',
+    project_detail_cta_desc: 'Mari kita diskusikan bagaimana kami bisa membantu bisnis Anda.',
+    project_detail_cta_button: 'Hubungi Kami',
+    language_switcher_aria: 'Pengubah bahasa',
     portfolio_view_detail: 'Lihat Detail Project',
     portfolio_view_all: 'Lihat Semua Project',
     portfolio_quote:
@@ -269,6 +343,80 @@ export const translations: Record<Locale, Record<string, string>> = {
       'Interactive mobile learning app with progress tracking, adaptive quizzes, and activity notifications.',
     portfolio_project_6_start: 'Sep 2023',
     portfolio_project_6_end: 'Apr 2024',
+    portfolio_rekapuang_desc:
+      'Track income, expenses, debt, and daily/monthly financial reports. Features include data export to Excel and PDF for further analysis.',
+    portfolio_project_02_desc:
+      'Point-of-sale mobile app for F&B outlets with cashier workflow, receipt printing, and daily revenue summary.',
+    portfolio_project_03_desc:
+      'Internal enterprise portal for document approval, role-based access, and monthly KPI reporting.',
+    portfolio_project_04_desc:
+      'Mobile fleet operations app with route checklist, geolocation logging, and dispatch communication module.',
+    portfolio_project_05_desc:
+      'Recruitment management website supporting applicant pipeline tracking and interview stage automation.',
+    portfolio_project_06_desc:
+      'Interactive learning mobile app with adaptive quizzes, push notifications, and progress monitoring.',
+    portfolio_project_07_desc:
+      'Healthcare website for appointment scheduling, medical record requests, and secure doctor messaging.',
+    portfolio_project_08_desc:
+      'Last-mile delivery app with task batching, proof-of-delivery upload, and in-app route navigation.',
+    portfolio_project_09_desc:
+      'Payment analytics dashboard for merchants with settlement reports and transaction monitoring features.',
+    portfolio_project_10_desc:
+      'Travel reservation mobile app covering package search, itinerary management, and digital ticket wallet.',
+    portfolio_project_11_desc:
+      'Web frontend module for ERP with procurement workflow, vendor management, and audit trail screens.',
+    portfolio_project_12_desc:
+      'Customer mobile app for utility services with bill payment reminders and outage report submissions.',
+    portfolio_project_13_desc:
+      'Creative studio website featuring dynamic galleries, booking requests, and CMS-based content updates.',
+    portfolio_project_14_desc:
+      'Fitness membership app with class booking, attendance QR scan, and personalized workout history.',
+    portfolio_project_15_desc:
+      'Supply chain website for coffee distributors with purchase order lifecycle and warehouse visibility.',
+    portfolio_project_16_desc:
+      'Residential services app for visitor access, facility booking, and emergency broadcast notifications.',
+    portfolio_project_17_desc:
+      'Agritech analytics website displaying sensor trends, harvest projections, and farm operation insights.',
+    portfolio_project_18_desc:
+      'Urban transport app with trip booking, fare estimation, and real-time driver arrival tracking.',
+    portfolio_project_19_desc:
+      'Legal operations website for contract templates, approval routing, and compliance document storage.',
+    portfolio_project_20_desc:
+      'Event management mobile app for ticket scanning, attendee communication, and speaker agenda control.',
+    portfolio_project_21_desc:
+      'University website revamp with admission funnel, scholarship pages, and multilingual content blocks.',
+    portfolio_project_22_desc:
+      'Clinic appointment mobile app with queue monitoring, reminder schedules, and secure account profile.',
+    portfolio_project_23_desc:
+      'Wholesale ordering website with tiered pricing, catalog segmentation, and purchase history exports.',
+    portfolio_project_24_desc:
+      'Logistics operations app for shipment status updates, checklist completion, and warehouse handover logs.',
+    portfolio_rekapuang_feature_1: 'Income and expense tracking',
+    portfolio_rekapuang_feature_2: 'Export reports to Excel/PDF',
+    portfolio_rekapuang_feature_3: 'Daily and monthly financial summaries',
+    portfolio_project_02_feature_1: 'Cashier workflow for F&B outlets',
+    portfolio_project_02_feature_2: 'Receipt printing',
+    portfolio_project_02_feature_3: 'Daily revenue recap',
+    portfolio_project_05_feature_1: 'Candidate pipeline management',
+    portfolio_project_05_feature_2: 'Interview stage automation',
+    portfolio_project_05_feature_3: 'Scoring-based applicant evaluation',
+    projects_page_title: 'All Projects',
+    projects_showing_prefix: 'Showing',
+    projects_showing_suffix: 'ongoing and completed projects.',
+    projects_back_to_landing: 'Back to Landing',
+    project_detail_back_to_projects: 'Back to Project List',
+    project_detail_not_found_title: 'Project not found',
+    project_detail_not_found_prefix: 'Sorry, project with ID',
+    project_detail_not_found_suffix: 'is not available.',
+    project_detail_about: 'About Project',
+    project_detail_features: 'Key Features',
+    project_detail_id: 'Project ID',
+    project_detail_duration: 'Duration',
+    project_detail_visit_landing: 'Visit Landing Page',
+    project_detail_cta_title: 'Interested in this project?',
+    project_detail_cta_desc: 'Let us discuss how we can help your business.',
+    project_detail_cta_button: 'Contact Us',
+    language_switcher_aria: 'Language switcher',
     portfolio_view_detail: 'View Project Detail',
     portfolio_view_all: 'View All Projects',
     portfolio_quote:
@@ -327,7 +475,5 @@ export const translations: Record<Locale, Record<string, string>> = {
     footer_android: 'Android',
     footer_windows: 'Windows',
     footer_macos: 'MacOS',
-    footer_copyright:
-      '© 2024 JAYIDEVTECH™. All Rights Reserved. Building the future of digital solutions.'
   }
 };

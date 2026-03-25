@@ -245,7 +245,7 @@
         >
           <img
             src="/images/jayidevtech-logo.png"
-            class="w-auto h-6 mr-3 sm:h-9 shrink-0 object-contain object-center"
+            class="w-auto h-9 shrink-0 object-contain object-center"
             alt="JAYIDEVTECH Logo"
             width="107"
             height="24"
@@ -253,8 +253,8 @@
             decoding="async"
           />
         </a>
-        <span class="block text-sm text-center text-gray-500 dark:text-gray-400" data-i18n="footer_copyright"
-          >© 2024 JAYIDEVTECH™. All Rights Reserved. Building the future of digital solutions.
+        <span class="block text-sm text-center text-gray-500 dark:text-gray-400">
+          © {{ yearNow }} All Rights Reserved. Building the future of digital solutions.
         </span>
         <ul class="flex justify-center mt-5 space-x-5">
           <li>
@@ -332,3 +332,7 @@
 
   <!-- Contact Form Handler -->
 </template>
+
+<script setup>
+const yearNow = new Date().getFullYear();
+</script>

@@ -5,45 +5,56 @@ export type ProjectItem = {
   image: string;
   imageAlt: string;
   title: string;
-  description: string;
+  descriptionKey: string;
   category: ProjectCategory;
   periodStart: string;
   periodEnd: string;
   detailHref: string;
+  landingPageUrl?: string;
+  features?: string[];
 };
 
 export const projects: ProjectItem[] = [
   {
-    id: 'project-01',
-    image: '/images/feature-1.png',
-    imageAlt: 'Arunika Commerce Platform preview',
-    title: 'Arunika Commerce Platform',
-    description:
-      'E-commerce website with integrated payment gateway, inventory sync, and real-time order analytics dashboard.',
-    category: 'website',
-    periodStart: 'Jan 2024',
-    periodEnd: 'Jun 2024',
-    detailHref: '#contact'
+    id: 'project-rekapuang',
+    image: '/images/portfolios/rekapuang.png',
+    imageAlt: 'Rekap Uang: Catatan Keuangan preview',
+    title: 'Rekap Uang: Catatan Keuangan',
+    descriptionKey: 'portfolio_rekapuang_desc',
+    category: 'mobile',
+    periodStart: 'Feb 2026',
+    periodEnd: 'Mar 2026',
+    detailHref: '/projects/rekapuang',
+    landingPageUrl: 'https://rekapuang.jayidev.tech',
+    features: [
+      'portfolio_rekapuang_feature_1',
+      'portfolio_rekapuang_feature_2',
+      'portfolio_rekapuang_feature_3'
+    ]
   },
   {
     id: 'project-02',
     image: '/images/hero.png',
     imageAlt: 'QuickServe Mobile POS preview',
     title: 'QuickServe Mobile POS',
-    description:
-      'Point-of-sale mobile app for F&B outlets with cashier workflow, receipt printing, and daily revenue summary.',
+    descriptionKey: 'portfolio_project_02_desc',
     category: 'mobile',
     periodStart: 'Mar 2024',
     periodEnd: 'Oct 2024',
-    detailHref: '#contact'
+    detailHref: '#contact',
+    landingPageUrl: 'https://quickserve-pos.com',
+    features: [
+      'portfolio_project_02_feature_1',
+      'portfolio_project_02_feature_2',
+      'portfolio_project_02_feature_3'
+    ]
   },
   {
     id: 'project-03',
     image: '/images/feature-2.png',
     imageAlt: 'SatuData Corporate Portal preview',
     title: 'SatuData Corporate Portal',
-    description:
-      'Internal enterprise portal for document approval, role-based access, and monthly KPI reporting.',
+    descriptionKey: 'portfolio_project_03_desc',
     category: 'website',
     periodStart: 'May 2024',
     periodEnd: 'In Progress',
@@ -54,8 +65,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-2.png',
     imageAlt: 'FleetTrack Driver App preview',
     title: 'FleetTrack Driver App',
-    description:
-      'Mobile fleet operations app with route checklist, geolocation logging, and dispatch communication module.',
+    descriptionKey: 'portfolio_project_04_desc',
     category: 'mobile',
     periodStart: 'Jul 2024',
     periodEnd: 'In Progress',
@@ -66,20 +76,24 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-1.png',
     imageAlt: 'SmartHR Recruitment Suite preview',
     title: 'SmartHR Recruitment Suite',
-    description:
-      'Recruitment management website supporting applicant pipeline tracking and interview stage automation.',
+    descriptionKey: 'portfolio_project_05_desc',
     category: 'website',
     periodStart: 'Feb 2023',
     periodEnd: 'Dec 2023',
-    detailHref: '#contact'
+    detailHref: '#contact',
+    landingPageUrl: 'https://smarthr-recruitment.id',
+    features: [
+      'portfolio_project_05_feature_1',
+      'portfolio_project_05_feature_2',
+      'portfolio_project_05_feature_3'
+    ]
   },
   {
     id: 'project-06',
     image: '/images/hero.png',
     imageAlt: 'EduMate Learning App preview',
     title: 'EduMate Learning App',
-    description:
-      'Interactive learning mobile app with adaptive quizzes, push notifications, and progress monitoring.',
+    descriptionKey: 'portfolio_project_06_desc',
     category: 'mobile',
     periodStart: 'Sep 2023',
     periodEnd: 'Apr 2024',
@@ -90,8 +104,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-1.png',
     imageAlt: 'Medlink Patient Portal preview',
     title: 'Medlink Patient Portal',
-    description:
-      'Healthcare website for appointment scheduling, medical record requests, and secure doctor messaging.',
+    descriptionKey: 'portfolio_project_07_desc',
     category: 'website',
     periodStart: 'Jan 2022',
     periodEnd: 'Aug 2022',
@@ -102,8 +115,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'ShopMate Courier App preview',
     title: 'ShopMate Courier App',
-    description:
-      'Last-mile delivery app with task batching, proof-of-delivery upload, and in-app route navigation.',
+    descriptionKey: 'portfolio_project_08_desc',
     category: 'mobile',
     periodStart: 'Apr 2022',
     periodEnd: 'Nov 2022',
@@ -114,8 +126,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-2.png',
     imageAlt: 'NusaPay Merchant Dashboard preview',
     title: 'NusaPay Merchant Dashboard',
-    description:
-      'Payment analytics dashboard for merchants with settlement reports and transaction monitoring features.',
+    descriptionKey: 'portfolio_project_09_desc',
     category: 'website',
     periodStart: 'Jun 2022',
     periodEnd: 'Feb 2023',
@@ -126,8 +137,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'Travelio Booking App preview',
     title: 'Travelio Booking App',
-    description:
-      'Travel reservation mobile app covering package search, itinerary management, and digital ticket wallet.',
+    descriptionKey: 'portfolio_project_10_desc',
     category: 'mobile',
     periodStart: 'Aug 2022',
     periodEnd: 'May 2023',
@@ -138,8 +148,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-1.png',
     imageAlt: 'BinaKarya ERP Frontend preview',
     title: 'BinaKarya ERP Frontend',
-    description:
-      'Web frontend module for ERP with procurement workflow, vendor management, and audit trail screens.',
+    descriptionKey: 'portfolio_project_11_desc',
     category: 'website',
     periodStart: 'Oct 2022',
     periodEnd: 'In Progress',
@@ -150,8 +159,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'AquaCare Utility App preview',
     title: 'AquaCare Utility App',
-    description:
-      'Customer mobile app for utility services with bill payment reminders and outage report submissions.',
+    descriptionKey: 'portfolio_project_12_desc',
     category: 'mobile',
     periodStart: 'Dec 2022',
     periodEnd: 'Jul 2023',
@@ -162,8 +170,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-2.png',
     imageAlt: 'Lensa Studio Portfolio Site preview',
     title: 'Lensa Studio Portfolio Site',
-    description:
-      'Creative studio website featuring dynamic galleries, booking requests, and CMS-based content updates.',
+    descriptionKey: 'portfolio_project_13_desc',
     category: 'website',
     periodStart: 'Jan 2023',
     periodEnd: 'Jun 2023',
@@ -174,8 +181,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'FitPulse Member App preview',
     title: 'FitPulse Member App',
-    description:
-      'Fitness membership app with class booking, attendance QR scan, and personalized workout history.',
+    descriptionKey: 'portfolio_project_14_desc',
     category: 'mobile',
     periodStart: 'Feb 2023',
     periodEnd: 'Sep 2023',
@@ -186,8 +192,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-1.png',
     imageAlt: 'KopiChain Supplier Portal preview',
     title: 'KopiChain Supplier Portal',
-    description:
-      'Supply chain website for coffee distributors with purchase order lifecycle and warehouse visibility.',
+    descriptionKey: 'portfolio_project_15_desc',
     category: 'website',
     periodStart: 'Mar 2023',
     periodEnd: 'Nov 2023',
@@ -198,8 +203,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'SafeHome Resident App preview',
     title: 'SafeHome Resident App',
-    description:
-      'Residential services app for visitor access, facility booking, and emergency broadcast notifications.',
+    descriptionKey: 'portfolio_project_16_desc',
     category: 'mobile',
     periodStart: 'May 2023',
     periodEnd: 'Dec 2023',
@@ -210,8 +214,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-2.png',
     imageAlt: 'GreenFarm Analytics Portal preview',
     title: 'GreenFarm Analytics Portal',
-    description:
-      'Agritech analytics website displaying sensor trends, harvest projections, and farm operation insights.',
+    descriptionKey: 'portfolio_project_17_desc',
     category: 'website',
     periodStart: 'Jun 2023',
     periodEnd: 'In Progress',
@@ -222,8 +225,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'CityRide Passenger App preview',
     title: 'CityRide Passenger App',
-    description:
-      'Urban transport app with trip booking, fare estimation, and real-time driver arrival tracking.',
+    descriptionKey: 'portfolio_project_18_desc',
     category: 'mobile',
     periodStart: 'Jul 2023',
     periodEnd: 'Mar 2024',
@@ -234,8 +236,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-1.png',
     imageAlt: 'Lexa Legal Document Hub preview',
     title: 'Lexa Legal Document Hub',
-    description:
-      'Legal operations website for contract templates, approval routing, and compliance document storage.',
+    descriptionKey: 'portfolio_project_19_desc',
     category: 'website',
     periodStart: 'Aug 2023',
     periodEnd: 'Jan 2024',
@@ -246,8 +247,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'Evently Organizer App preview',
     title: 'Evently Organizer App',
-    description:
-      'Event management mobile app for ticket scanning, attendee communication, and speaker agenda control.',
+    descriptionKey: 'portfolio_project_20_desc',
     category: 'mobile',
     periodStart: 'Sep 2023',
     periodEnd: 'In Progress',
@@ -258,8 +258,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-2.png',
     imageAlt: 'EduBoard Campus Website preview',
     title: 'EduBoard Campus Website',
-    description:
-      'University website revamp with admission funnel, scholarship pages, and multilingual content blocks.',
+    descriptionKey: 'portfolio_project_21_desc',
     category: 'website',
     periodStart: 'Oct 2023',
     periodEnd: 'Apr 2024',
@@ -270,8 +269,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'CareNow Appointment App preview',
     title: 'CareNow Appointment App',
-    description:
-      'Clinic appointment mobile app with queue monitoring, reminder schedules, and secure account profile.',
+    descriptionKey: 'portfolio_project_22_desc',
     category: 'mobile',
     periodStart: 'Nov 2023',
     periodEnd: 'In Progress',
@@ -282,8 +280,7 @@ export const projects: ProjectItem[] = [
     image: '/images/feature-1.png',
     imageAlt: 'PrimeRetail B2B Portal preview',
     title: 'PrimeRetail B2B Portal',
-    description:
-      'Wholesale ordering website with tiered pricing, catalog segmentation, and purchase history exports.',
+    descriptionKey: 'portfolio_project_23_desc',
     category: 'website',
     periodStart: 'Dec 2023',
     periodEnd: 'In Progress',
@@ -294,8 +291,7 @@ export const projects: ProjectItem[] = [
     image: '/images/hero.png',
     imageAlt: 'MoveIt Logistics App preview',
     title: 'MoveIt Logistics App',
-    description:
-      'Logistics operations app for shipment status updates, checklist completion, and warehouse handover logs.',
+    descriptionKey: 'portfolio_project_24_desc',
     category: 'mobile',
     periodStart: 'Jan 2024',
     periodEnd: 'In Progress',

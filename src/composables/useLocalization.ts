@@ -1,4 +1,7 @@
+import { ref } from 'vue';
 import { LOCAL_STORAGE_LANG_KEY, translations, type Locale } from '../localization/translations';
+
+let currentLocale = ref<Locale>('en');
 
 function getSystemLocale(): Locale {
   const browserLocales = navigator.languages && navigator.languages.length > 0
@@ -64,6 +67,7 @@ function applyLocalization(locale: Locale): void {
 
 export function setupLocalization(): void {
   const initialLocale = resolveInitialLocale();
+  currentLocale.value = initialLocale;
   applyLocalization(initialLocale);
 
   document.querySelectorAll<HTMLButtonElement>('[data-lang-switch]').forEach((button) => {
@@ -72,8 +76,17 @@ export function setupLocalization(): void {
       if (locale !== 'id' && locale !== 'en') {
         return;
       }
+      currentLocale.value = locale;
       localStorage.setItem(LOCAL_STORAGE_LANG_KEY, locale);
       applyLocalization(locale);
     });
   });
+}
+
+export function getTranslation(key: string): string {
+  const locale = currentLocale.value;
+  const dict = translations[locale];
+  return Object.prototype.hasOwnProperty.call(dict, key)
+    ? (dict as Record<string, string>)[key]
+    : key;
 }
