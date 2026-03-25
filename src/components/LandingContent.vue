@@ -1,7 +1,7 @@
 <template>
   <header class="fixed w-full">
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
-      <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+      <div class="flex flex-wrap items-center justify-between max-w-7xl px-4 mx-auto">
         <a href="/" class="flex items-center">
           <img
             src="/images/logo_jayidevtech.svg"
@@ -109,7 +109,7 @@
 
   <nav aria-label="Breadcrumb" class="bg-white pt-20 dark:bg-gray-900">
     <ol
-      class="max-w-screen-xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"
+      class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400"
     >
       <li><a href="#home" class="hover:text-blue-700 dark:hover:text-blue-400">Home</a></li>
       <li>/</li>
@@ -122,7 +122,7 @@
   <!-- Start block -->
   <section id="home" class="bg-white dark:bg-gray-900">
     <div
-      class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
+      class="grid max-w-7xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
     >
       <div class="mr-auto place-self-center lg:col-span-7">
         <h1
@@ -181,7 +181,7 @@
   <!-- End block -->
   <!-- Start block -->
   <section class="bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
+    <div class="max-w-7xl px-4 pb-8 mx-auto lg:pb-16">
       <div
         class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400"
       >
@@ -395,7 +395,7 @@
   <!-- End block -->
   <!-- Start block -->
   <section id="services" class="bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
+    <div class="max-w-7xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
       <!-- Row -->
       <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
         <div class="text-gray-500 sm:text-lg dark:text-gray-400">
@@ -412,7 +412,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -430,7 +430,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -448,7 +448,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -504,7 +504,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -522,7 +522,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -540,7 +540,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -558,7 +558,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -576,7 +576,7 @@
             <li class="flex space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
+                class="shrink-0 w-5 h-5 text-blue-500 dark:text-blue-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -604,7 +604,7 @@
   <!-- Start block -->
   <section id="about" class="bg-white dark:bg-gray-900">
     <div
-      class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6"
+      class="items-center max-w-7xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-24 lg:px-6"
     >
       <div class="col-span-2 mb-8">
         <p class="text-lg font-medium text-blue-600 dark:text-blue-500">Trusted Partner</p>
@@ -735,8 +735,8 @@
   <!-- End block -->
   <!-- Start block -->
   <section id="portfolio" class="bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
-      <figure class="max-w-screen-md mx-auto">
+    <div class="max-w-7xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-6">
+      <figure class="max-w-3xl mx-auto">
         <svg
           class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
           viewBox="0 0 24 27"
@@ -778,8 +778,8 @@
   <!-- End block -->
   <!-- Start block -->
   <section id="pricing" class="bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
-      <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+    <div class="max-w-7xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+      <div class="max-w-3xl mx-auto mb-8 text-center lg:mb-12">
         <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
           Flexible Pricing for Your Needs
         </h2>
@@ -806,7 +806,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -822,7 +822,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -838,7 +838,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -854,7 +854,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -870,7 +870,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -908,7 +908,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -924,7 +924,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -940,7 +940,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -956,7 +956,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -972,7 +972,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1010,7 +1010,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1026,7 +1026,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1042,7 +1042,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1058,7 +1058,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1074,7 +1074,7 @@
             <li class="flex items-center space-x-3">
               <!-- Icon -->
               <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                class="shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1101,13 +1101,13 @@
   <!-- End block -->
   <!-- Start block -->
   <section id="faq" class="bg-white dark:bg-gray-900">
-    <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-24 lg:px-6">
+    <div class="max-w-7xl px-4 pb-8 mx-auto lg:pb-24 lg:px-6">
       <h2
         class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white"
       >
         Frequently asked questions
       </h2>
-      <div class="max-w-screen-md mx-auto">
+      <div class="max-w-3xl mx-auto">
         <div
           id="accordion-flush"
           data-accordion="collapse"
@@ -1268,7 +1268,7 @@
   <!-- End block -->
   <!-- Start block -->
   <section id="contact" class="bg-gray-50 dark:bg-gray-800">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+    <div class="max-w-7xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
       <div class="max-w-screen-sm mx-auto">
         <h2
           class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white text-center"
@@ -1402,7 +1402,7 @@
   </section>
   <!-- End block -->
   <footer class="bg-white dark:bg-gray-800">
-    <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
+    <div class="max-w-7xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
         <div>
           <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
