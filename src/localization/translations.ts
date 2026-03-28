@@ -108,8 +108,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     portfolio_project_6_end: 'Apr 2024',
     portfolio_rekapuang_desc:
       'Catat pemasukan, pengeluaran, utang, dan laporan keuangan harian/bulanan. Fitur ekspor data ke Excel dan PDF untuk analisis lebih lanjut.',
-    portfolio_project_02_desc:
-      'Aplikasi mobile point-of-sale untuk outlet F&B dengan workflow kasir, pencetakan kwitansi, dan ringkasan pendapatan harian.',
+    portfolio_rekapuang_lp_desc:
+      'Landing page promosi untuk aplikasi Rekap Uang yang dirancang fokus pada konversi, edukasi manfaat produk, dan ajakan unduh aplikasi secara jelas.',
+    portfolio_dagingternak_desc:
+      'Website landing page untuk Supplier daging potong segar untuk rumah tangga, UMKM, dan kebutuhan acara. Harga transparan, bisa custom potongan, dan respons order cepat via WhatsApp.',
     portfolio_project_03_desc:
       'Portal bisnis internal untuk persetujuan dokumen, akses berbasis peran, dan pelaporan KPI bulanan.',
     portfolio_project_04_desc:
@@ -157,6 +159,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     portfolio_rekapuang_feature_1: 'Pencatatan pemasukan dan pengeluaran',
     portfolio_rekapuang_feature_2: 'Ekspor laporan ke Excel/PDF',
     portfolio_rekapuang_feature_3: 'Ringkasan keuangan harian dan bulanan',
+    portfolio_rekapuang_lp_feature_1:
+      'Struktur halaman berbasis funnel: hero, manfaat utama, testimoni, dan CTA yang mendorong konversi.',
+    portfolio_rekapuang_lp_feature_2:
+      'Copywriting berorientasi masalah pengguna, sehingga nilai produk cepat dipahami dalam sekali scroll.',
+    portfolio_rekapuang_lp_feature_3:
+      'Optimasi mobile-first dengan performa ringan agar pengalaman pengguna tetap cepat di berbagai perangkat.',
+    portfolio_dagingternak_feature_1: 'Daftar kategori produk lengkap dengan deskripsi dan foto untuk setiap jenis daging.',
+    portfolio_dagingternak_feature_2: 'Harga transparan dengan estimasi yang jelas tanpa biaya tersembunyi.',
+    portfolio_dagingternak_feature_3: 'Order cepat dan responsif melalui integrasi WhatsApp untuk komunikasi langsung dengan pelanggan.',
     portfolio_project_02_feature_1: 'Workflow kasir untuk outlet F&B',
     portfolio_project_02_feature_2: 'Pencetakan struk',
     portfolio_project_02_feature_3: 'Rekap pendapatan harian',
@@ -345,8 +356,10 @@ export const translations: Record<Locale, Record<string, string>> = {
     portfolio_project_6_end: 'Apr 2024',
     portfolio_rekapuang_desc:
       'Track income, expenses, debt, and daily/monthly financial reports. Features include data export to Excel and PDF for further analysis.',
-    portfolio_project_02_desc:
-      'Point-of-sale mobile app for F&B outlets with cashier workflow, receipt printing, and daily revenue summary.',
+    portfolio_rekapuang_lp_desc:
+      'A promotional landing page for the Rekap Uang app, built to maximize conversion, explain product value, and drive app downloads clearly.',
+    portfolio_dagingternak_desc:
+      'Landing page website for a fresh meat supplier catering to households, UMKM, and event needs. Transparent pricing, custom cuts available, and fast order response via WhatsApp.',
     portfolio_project_03_desc:
       'Internal enterprise portal for document approval, role-based access, and monthly KPI reporting.',
     portfolio_project_04_desc:
@@ -394,6 +407,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     portfolio_rekapuang_feature_1: 'Income and expense tracking',
     portfolio_rekapuang_feature_2: 'Export reports to Excel/PDF',
     portfolio_rekapuang_feature_3: 'Daily and monthly financial summaries',
+    portfolio_rekapuang_lp_feature_1:
+      'Funnel-based page structure: hero section, core benefits, testimonials, and clear conversion-focused CTAs.',
+    portfolio_rekapuang_lp_feature_2:
+      'Problem-first copywriting so users can quickly understand product value in a single scroll.',
+    portfolio_rekapuang_lp_feature_3:
+      'Mobile-first optimization with lightweight performance for a fast experience across devices.',
+    portfolio_dagingternak_feature_1: 'Complete product categories with descriptions and photos for each type of meat.',
+    portfolio_dagingternak_feature_2: 'Transparent pricing with clear estimates and no hidden fees.',
+    portfolio_dagingternak_feature_3: 'Fast and responsive ordering through WhatsApp integration for direct customer communication.',
     portfolio_project_02_feature_1: 'Cashier workflow for F&B outlets',
     portfolio_project_02_feature_2: 'Receipt printing',
     portfolio_project_02_feature_3: 'Daily revenue recap',

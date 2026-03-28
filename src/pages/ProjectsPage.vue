@@ -58,7 +58,7 @@ const projectList = computed(() =>
           <img
             :src="project.image"
             :alt="project.imageAlt"
-            class="object-cover w-full h-48"
+            class="object-cover object-top w-full h-48"
             loading="lazy"
             decoding="async"
           />

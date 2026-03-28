@@ -33,32 +33,38 @@ export const projects: ProjectItem[] = [
     ]
   },
   {
-    id: 'project-02',
-    image: '/images/hero.png',
-    imageAlt: 'QuickServe Mobile POS preview',
-    title: 'QuickServe Mobile POS',
-    descriptionKey: 'portfolio_project_02_desc',
-    category: 'mobile',
-    periodStart: 'Mar 2024',
-    periodEnd: 'Oct 2024',
-    detailHref: '#contact',
-    landingPageUrl: 'https://quickserve-pos.com',
+    id: 'project-dagingternak',
+    image: '/images/portfolios/dagingternak.png',
+    imageAlt: 'Daging Ternak preview',
+    title: 'Daging Ternak',
+    descriptionKey: 'portfolio_dagingternak_desc',
+    category: 'website',
+    periodStart: 'Mar 2026',
+    periodEnd: 'Apr 2026',
+    detailHref: '/projects/dagingternak',
+    landingPageUrl: 'https://dagingternak.jayidev.tech',
     features: [
-      'portfolio_project_02_feature_1',
-      'portfolio_project_02_feature_2',
-      'portfolio_project_02_feature_3'
+      'portfolio_dagingternak_feature_1',
+      'portfolio_dagingternak_feature_2',
+      'portfolio_dagingternak_feature_3'
     ]
   },
   {
-    id: 'project-03',
-    image: '/images/feature-2.png',
-    imageAlt: 'SatuData Corporate Portal preview',
-    title: 'SatuData Corporate Portal',
-    descriptionKey: 'portfolio_project_03_desc',
+    id: 'project-rekapuang-lp',
+    image: '/images/portfolios/rekapuang-lp.png',
+    imageAlt: 'Rekap Uang Landing Page preview',
+    title: 'Rekap Uang Landing Page',
+    descriptionKey: 'portfolio_rekapuang_lp_desc',
     category: 'website',
-    periodStart: 'May 2024',
-    periodEnd: 'In Progress',
-    detailHref: '#contact'
+    periodStart: 'Mar 2026',
+    periodEnd: 'Apr 2026',
+    detailHref: '/projects/rekapuang-lp',
+    landingPageUrl: 'https://rekapuang.jayidev.tech',
+    features: [
+      'portfolio_rekapuang_lp_feature_1',
+      'portfolio_rekapuang_lp_feature_2',
+      'portfolio_rekapuang_lp_feature_3'
+    ]
   },
   {
     id: 'project-04',
