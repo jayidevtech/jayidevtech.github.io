@@ -56,20 +56,6 @@
     <meta name="theme-color" content="#ffffff" />
 
     <script>
-      (function restoreSpaPathFromGhPagesRedirect() {
-        var params = new URLSearchParams(window.location.search);
-        var redirectedPath = params.get('p');
-
-        if (!redirectedPath) {
-          return;
-        }
-
-        var redirectedQuery = params.get('q');
-        var restoredUrl = redirectedPath + (redirectedQuery ? '?' + redirectedQuery : '') + window.location.hash;
-
-        window.history.replaceState(null, '', restoredUrl);
-      })();
-
       window.JDT_ANALYTICS_CONFIG = {
         measurementId: 'G-XXXXXXXXXX',
         formEndpoint: ''

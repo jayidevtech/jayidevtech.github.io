@@ -1,188 +1,321 @@
 # JAYIDEVTECH - Professional Landing Page
 
-![JAYIDEVTECH Landing Page](./images/logo_jayidevtech.svg)
+![JAYIDEVTECH Landing Page](./static/images/jayidevtech-logo.png)
 
-A professional landing page for JAYIDEVTECH showcasing our software development services. Built with modern web technologies using **Tailwind CSS CDN** and **Flowbite CDN** for a responsive, fast, and beautiful user experience.
+A professional landing page for JAYIDEVTECH showcasing our software development services. Built with **Vue 3 + Vite**, **Tailwind CSS**, and **Flowbite** for a responsive, fast, and maintainable experience.
 
-## ✨ Pure Static / CDN Version
+## ✨ Vue Build Setup
 
-**No build process required!** This version uses CDN links - just open in browser or upload to any hosting.
+This version uses a Vue 3 + Vite build pipeline with Tailwind CSS. Source code is developed in `src/` and production output is generated into `dist/`.
 
 ## 🚀 Features
 
 - **Responsive Design** - Works perfectly on all devices
 - **Modern UI/UX** - Clean and professional interface
-- **Fast Performance** - Optimized for speed
+- **Fast Performance** - Optimized production build via Vite
 - **SEO Friendly** - Proper meta tags and semantic HTML
-- **Dark Mode Support** - Automatic based on system preferences
+- **Dark Mode Support** - Full dark mode implementation
 - **Smooth Animations** - Engaging user interactions
-- **Zero Build** - No npm, no Node.js, no compilation needed!
-- **Deploy Anywhere** - Works on any hosting (cPanel, Netlify, Vercel, GitHub Pages, etc)
+- **Tailwind CSS** - Utility-first CSS framework
+- **Flowbite Components** - Pre-built interactive components
+- **Developer Friendly** - Easy to customize and extend
+
+## 📈 Current Status
+
+- **Workflow:** Build-only (`src/` → `dist/`)
+- **Phase 1:** ✅ Complete (stabilization and build pipeline)
+- **Phase 2:** 🟨 Mostly complete (interactive fixes, SEO, analytics done)
+- **Remaining in Phase 2:** Final image compression/performance pass
+- **Next focus:** Phase 3 cross-browser and quality testing
+
+Detailed progress is tracked in **[docs/PHASE_2_STATUS.md](./docs/PHASE_2_STATUS.md)**.
 
 ## 🛠️ Built With
 
-- [Tailwind CSS](https://tailwindcss.com/) - Via CDN (cdn.tailwindcss.com)
-- [Flowbite](https://flowbite.com/) - Via CDN (cdn.jsdelivr.net)
-- HTML5 & Pure JavaScript
-- No build tools required!
+- [Tailwind CSS v4.2.1](https://tailwindcss.com/) - Utility-first CSS framework
+- [Flowbite v4.0.1](https://flowbite.com/) - Component library built on Tailwind
+- [Vite](https://vite.dev/) - Frontend build tool
+- [Vue 3](https://vuejs.org/) - Progressive JavaScript framework
+- [TypeScript](https://www.typescriptlang.org/) - Static typing for Vue components
+- [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) - Linting and formatting
+- [PostCSS](https://postcss.org/) - CSS processing
+- Node.js & npm (build tools)
 
 ## 🎯 Quick Start
 
-### Local Testing
+### Prerequisites
+- Node.js (v18+)
+- npm (v9+)
 
-**Option 1: Open directly in browser**
+### Installation
+
 ```bash
-# Simply open the file
-open index.html
+# Clone or download the project
+cd jayidevtech-landing-page
+
+# Install dependencies
+npm install
+
+# Build production bundle
+npm run build
+
+# Start development server
+npm run dev
+
+# Type check + lint
+npm run check
 ```
 
-**Option 2: Use a simple HTTP server**
+### Local Testing
+
 ```bash
-# Using Python (if installed)
-python3 -m http.server 8000
+# Run local production preview
+npm run preview
+```
 
-# Using PHP (if installed)
-php -S localhost:8000
+### Build Process
 
-# Then open: http://localhost:8000
+The project uses Vite to bundle Vue app + Tailwind styles:
+
+```bash
+# Build once
+npm run build
+
+# Start local development
+npm run dev
+```
+
+This generates optimized assets in `dist/`.
+
+### Quality Commands
+
+```bash
+# TypeScript check only
+npm run type-check
+
+# Lint
+npm run lint
+
+# Auto-fix lint issues
+npm run lint:fix
+
+# Format all files
+npm run format
 ```
 
 ### Deploy to Production
 
-**No build required!** Just upload these files:
+**First, build the project:**
 
-#### Files to Upload:
+```bash
+npm run build
 ```
-✅ index.html
-✅ images/ (folder lengkap)
-✅ favicon-32x32.png
-✅ favicon-16x16.png
-✅ apple-touch-icon.png
-✅ site.webmanifest
-✅ robots.txt (optional, for SEO)
-✅ sitemap.xml (optional, for SEO)
-```
+
+This creates the `dist/` folder with:
+- `dist/index.html` - Production entry
+- `dist/assets/` - Bundled JS/CSS and hashed assets
+- `dist/images/` - Static image assets
+
+**Upload the `dist/` folder contents to your hosting:**
 
 #### Deployment Options:
 
-**1. Vercel (Gratis)**
+**1. Vercel (Recommended - Free tier)**
 ```bash
-# Install Vercel CLI (one time only)
 npm install -g vercel
-
-# Deploy
-vercel --prod
+vercel deploy
 ```
 
-**2. Netlify (Gratis)**
-- Drag & drop ke [Netlify Drop](https://app.netlify.com/drop)
-- Atau gunakan Netlify CLI
-
-**3. GitHub Pages (Gratis)**
+**2. Netlify**
 ```bash
-# Push to GitHub
+npm install -g netlify-cli
+netlify deploy --prod --dir=dist
+```
+
+**3. GitHub Pages**
+```bash
 git add .
 git commit -m "Deploy landing page"
 git push
-
-# Enable GitHub Pages di repository settings
+# In GitHub: Settings -> Pages -> Source = GitHub Actions
 ```
 
-**4. cPanel / Traditional Hosting**
-- Upload semua files via FTP/File Manager
-- Extract di folder `public_html/`
+Important: for this Vue + Vite app, do not use **Deploy from a branch**. If branch mode is used, production may serve `index.html` source (`/src/main.ts`) and show blank screen.
+
+**4. Traditional Hosting (cPanel/FTP)**
+- Build locally: `npm run build`
+- Upload `dist/` folder contents via FTP/File Manager
+- Ensure `index.html` is in root directory
 
 ## 📁 Project Structure
 
 ```
 jayidevtech-landing-page/
-├── index.html              # Main HTML file (CDN version)
-├── images/                 # Image assets
-│   ├── hero.png
-│   ├── feature-1.png
-│   ├── feature-2.png
-│   └── logo_jayidevtech.svg
-├── favicon-32x32.png       # Favicon
-├── favicon-16x16.png
-├── apple-touch-icon.png
-├── site.webmanifest
-├── robots.txt              # SEO
-├── sitemap.xml             # SEO
-├── README.md               # This file
-├── CDN-README.md           # Quick start untuk CDN
-├── STATIC-vs-BUILD.md      # Comparison CDN vs Build
-├── DEPLOYMENT.md           # Deployment guide
-└── CHECKLIST.md            # Pre-deployment checklist
+├── src/
+│   ├── App.vue                 # Main Vue app component
+│   ├── main.ts                 # Vue app entry point
+│   ├── css/
+│   │   └── style.css           # Tailwind directives
+│   └── components/
+│       └── LandingContent.vue  # Landing page markup component
+├── index.html                  # Vite HTML entry
+├── dist/                       # Production build output (generated)
+├── static/                     # Static assets copied as-is by Vite
+│   ├── images/                 # Public images (including icons)
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── site.webmanifest
+│   └── browserconfig.xml
+├── package.json                # npm configuration
+├── tsconfig.json               # TypeScript configuration
+├── .eslintrc.cjs               # ESLint configuration
+├── .prettierrc.json            # Prettier configuration
+├── tailwind.config.js          # Tailwind configuration
+├── postcss.config.js           # PostCSS configuration
+├── README.md                   # Main documentation
+└── docs/                       # Project documentation
+    ├── DEPLOYMENT.md           # Deployment instructions
+    ├── CHECKLIST.md            # Pre-launch checklist
+    ├── FORMSPREE_SETUP.md      # Contact form integration guide
+    ├── ANALYTICS_SETUP.md      # Google Analytics setup guide
+    ├── PHASE_2_STATUS.md       # Phase 2 overall status
+  ├── archive/                # Historical docs
+  │   ├── ACTIONABLE_CHECKLIST.md
+  │   ├── PROJECT_ANALYSIS.md
+  │   ├── PHASE_2_1_COMPLETE.md
+  │   └── DEVELOPMENT_PLAN_ID.md
+    └── README.md               # Documentation index
 ```
 
 ## 🎨 Customization
 
-### Mengubah Konten
-Simply edit `index.html` dengan text editor favorit Anda:
+### Editing Content
 
-1. **Hero Section** - Edit tagline dan deskripsi (line ~85-95)
-2. **Services** - Update layanan yang ditawarkan (line ~130+)
-3. **Pricing** - Sesuaikan paket harga (line ~400+)
-4. **Contact** - Ganti email dan info kontak (line ~570+)
+Edit `src/components/LandingContent.vue`:
 
-### Mengubah Warna
-Edit bagian `<script>` di dalam `<head>`:
+1. **Hero Section** - Update tagline and description
+2. **Services** - Modify service offerings
+3. **Pricing** - Update pricing plans
+4. **Contact** - Add your contact information
+5. **Footer** - Update company information
 
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                primary: {
-                    "500": "#3b82f6",  // Ubah kode warna ini
-                    // ...
-                }
-            }
-        }
-    }
-}
+Then rebuild:
+```bash
+npm run build
 ```
 
-### Menambah Section Baru
-Cukup tambahkan HTML baru di `<body>`. Semua Tailwind utility classes langsung bisa digunakan!
+### Styling & Colors
+
+Tailwind CSS utility classes are used throughout. To customize:
+
+1. **Edit `tailwind.config.js`** for global configuration
+2. **Add custom CSS** to `src/css/style.css`
+3. **Use Tailwind directives** like `@apply` for custom classes
+4. **Run check/build** with `npm run check`
+
+### Adding New Sections
+
+Add new section markup in `src/components/LandingContent.vue`.
+
+Example:
+```html
+<section id="new-section" class="py-12 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8">New Section</h2>
+    <!-- Your content here -->
+  </div>
+</section>
+```
+
+Then validate/build:
+```bash
+npm run check
+```
 
 ## 📚 Documentation
 
-- **[CDN-README.md](./CDN-README.md)** - Quick start guide untuk CDN version
-- **[STATIC-vs-BUILD.md](./STATIC-vs-BUILD.md)** - Perbandingan CDN vs Build approach  
-- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Detailed deployment instructions
-- **[CHECKLIST.md](./CHECKLIST.md)** - Pre-publication checklist
+Comprehensive documentation is available in the `docs/` folder:
+
+- **[docs/FORMSPREE_SETUP.md](./docs/FORMSPREE_SETUP.md)** - Contact form integration guide with Formspree
+- **[docs/ANALYTICS_SETUP.md](./docs/ANALYTICS_SETUP.md)** - Google Analytics (GA4) integration and event tracking guide
+- **[docs/PHASE_2_STATUS.md](./docs/PHASE_2_STATUS.md)** - Current project phase status and progress
+- **[docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md)** - Detailed deployment instructions for various hosting platforms
+- **[docs/CHECKLIST.md](./docs/CHECKLIST.md)** - Pre-launch verification checklist
+- **[docs/archive/ACTIONABLE_CHECKLIST.md](./docs/archive/ACTIONABLE_CHECKLIST.md)** - Historical development checklist
+- **[docs/archive/PROJECT_ANALYSIS.md](./docs/archive/PROJECT_ANALYSIS.md)** - Historical technical analysis
+- **[docs/archive/PHASE_2_1_COMPLETE.md](./docs/archive/PHASE_2_1_COMPLETE.md)** - Historical Phase 2.1 completion summary
+- **[docs/archive/DEVELOPMENT_PLAN_ID.md](./docs/archive/DEVELOPMENT_PLAN_ID.md)** - Historical Indonesian development plan
 
 ## ❓ FAQ
 
-### Apakah perlu install Node.js atau npm?
-**Tidak!** Versi ini pure static dengan CDN. Tidak butuh npm sama sekali.
+### Do I need to install Node.js?
+**Yes**, for development. Download from [nodejs.org](https://nodejs.org/). Not needed on production server.
 
-### Apakah CDN aman untuk production?
-**Ya!** Tailwind CDN dan Flowbite CDN sangat reliable dan digunakan jutaan website.
+### How do I make changes?
+1. Edit files in `src/` (utama: `src/components/LandingContent.vue`)
+2. Run `npm run check` untuk type-check + lint + build
+3. Deploy folder `dist/`
 
-### Bagaimana cara update konten?
-Edit file `index.html` → Upload ke hosting → Done!
+### What's the difference between src/ and dist/?
+- **src/** - Source code Vue + TypeScript
+- **dist/** - Output build production (ready to deploy)
 
-### Apakah bisa custom styling?
-**Bisa!** Edit inline Tailwind config di `<script>` tag atau tambahkan custom CSS.
+### Can I use this without building?
+No. This project is **build-only** and uses workflow `src/` → `dist/`.
 
-### Loading lambat karena CDN?
-CDN biasanya lebih cepat karena cached globally. Tapi jika ingin self-host, baca [STATIC-vs-BUILD.md](./STATIC-vs-BUILD.md).
+### How do I preview changes locally?
+```bash
+npm run dev      # dev server
+npm run preview  # preview hasil build
+```
+
+### Is the CSS optimized?
+Yes! Tailwind CSS build process removes unused styles and optimizes output.
+
+### Can I add custom CSS?
+Yes, add it to `src/css/style.css` and rebuild with `npm run build`
+
+### How do I activate the contact form?
+See [docs/FORMSPREE_SETUP.md](./docs/FORMSPREE_SETUP.md) for complete integration instructions with Formspree (5 minutes setup).
 
 ## 🆘 Troubleshooting
 
-**Styling tidak muncul?**
-- Pastikan koneksi internet aktif (CDN butuh internet)
-- Check browser console untuk errors
+### Build fails with "npm: command not found"
+Install Node.js from [nodejs.org](https://nodejs.org/)
 
-**Images tidak tampil?**
-- Cek path relatif (`./images/nama-file.png`)
-- Pastikan folder images ter-upload
+### Styling not applied
+```bash
+# Rebuild
+npm run build
 
-**Interactive elements (accordion, modal) tidak bekerja?**
-- Pastikan Flowbite JS script ter-load
-- Check browser console untuk JavaScript errors
+# Verify dist exists
+ls -la dist
+```
+
+### Changes not reflecting
+1. Edit file sumber (`src/components/LandingContent.vue` / `src/css/style.css`)
+2. Run `npm run check`
+3. Refresh browser (hard refresh: Cmd+Shift+R)
+
+### Images not showing
+- Ensure images are in `static/images/` folder
+- Check image paths use `/images/filename.ext`
+- Verify `npm run build` completed successfully
+
+### Local server not starting
+```bash
+# Vite preview with custom port
+npm run preview -- --port 8001
+```
+
+### Port 8000 already in use
+```bash
+# Find process using port 8000
+lsof -i :8000
+
+# Kill the process
+kill -9 <PID>
+```
 
 ## 📄 License
 

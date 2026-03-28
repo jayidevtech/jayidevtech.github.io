@@ -9,7 +9,6 @@
 
 # Build-related (tidak dipakai tapi untuk jaga-jaga)
 node_modules/
-package-lock.json
 dist/
 build/
 
