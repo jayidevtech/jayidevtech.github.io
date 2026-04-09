@@ -56,6 +56,27 @@
     <meta name="theme-color" content="#ffffff" />
 
     <script>
+      (function setDynamicCanonicalAndOgUrl() {
+        var canonicalElement = document.querySelector('link[rel="canonical"]');
+        var ogUrlElement = document.querySelector('meta[property="og:url"]');
+
+        if (!canonicalElement && !ogUrlElement) {
+          return;
+        }
+
+        var pathname = window.location.pathname.replace(/\/index\.html$/, '/');
+        var normalizedPath = pathname || '/';
+        var canonicalUrl = 'https://jayidev.tech' + normalizedPath;
+
+        if (canonicalElement) {
+          canonicalElement.setAttribute('href', canonicalUrl);
+        }
+
+        if (ogUrlElement) {
+          ogUrlElement.setAttribute('content', canonicalUrl);
+        }
+      })();
+
       (function restoreSpaPathFromGhPagesRedirect() {
         var params = new URLSearchParams(window.location.search);
         var redirectedPath = params.get('p');
